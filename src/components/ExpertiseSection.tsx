@@ -7,22 +7,22 @@ const ExpertiseSection = () => {
     {
       icon: GraduationCap,
       title: "MBA from ISEG Lisbon",
-      description: "Advanced business education from one of Europe's top business schools"
+      description: "Advanced business education from Europe's top business schools"
     },
     {
       icon: TrendingUp,
-      title: "Banking & Investment Analysis",
-      description: "Extensive experience in South American banking and European investment markets"
+      title: "Banking & Investment",
+      description: "Extensive experience in South American banking and European markets"
     },
     {
       icon: Users,
-      title: "International Client Focus",
+      title: "International Focus",
       description: "Specialized expertise serving high-net-worth international investors"
     },
     {
       icon: Award,
       title: "Strategic Advisory",
-      description: "Not just an agent - your strategic partner for long-term wealth building"
+      description: "Your strategic partner for long-term wealth building"
     }
   ];
 
@@ -36,7 +36,11 @@ const ExpertiseSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-background relative overflow-hidden">
+      {/* Floating elements */}
+      <div className="absolute top-16 right-16 w-24 h-24 bg-accent/10 rounded-full animate-float"></div>
+      <div className="absolute bottom-32 left-10 w-16 h-16 bg-primary/10 rounded-full animate-pulse-glow"></div>
+      
       <div className="container mx-auto px-6">
         <div className="text-center space-y-4 mb-16">
           <Badge variant="outline" className="mb-4">Your Strategic Advisor</Badge>
@@ -45,7 +49,7 @@ const ExpertiseSection = () => {
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             I combine financial expertise, market intelligence, and personal guidance to deliver 
-            results that go far beyond traditional real estate services.
+            results beyond traditional real estate services.
           </p>
         </div>
 

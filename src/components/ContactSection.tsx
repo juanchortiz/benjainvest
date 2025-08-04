@@ -4,18 +4,29 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Calendar, Mail, Phone, MessageSquare, ArrowRight } from "lucide-react";
+import apartmentInterior from "@/assets/lisbon-apartment-interior.jpg";
 
 const ContactSection = () => {
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-6">
+    <section className="py-20 bg-background relative overflow-hidden">
+      {/* Background image with overlay */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center opacity-5"
+        style={{ backgroundImage: `url(${apartmentInterior})` }}
+      ></div>
+      
+      {/* Floating elements */}
+      <div className="absolute top-20 left-20 w-20 h-20 bg-primary/10 rounded-full animate-float-slow"></div>
+      <div className="absolute bottom-40 right-10 w-16 h-16 bg-accent/15 rounded-full animate-pulse-glow"></div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground">
             Let's Talk Real Estate in Portugal
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to explore investment opportunities in Portugal? I'm here to guide you every step of the way. 
-            Choose how you'd like to connect and let's start building your investment strategy.
+            Ready to explore Portugal's investment opportunities? I'm here to guide you every step. 
+            Choose how you'd like to connect and let's start building your strategy.
           </p>
         </div>
 
@@ -128,19 +139,19 @@ const ContactSection = () => {
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-muted-foreground">Personalized market analysis and investment recommendations</span>
+                  <span className="text-muted-foreground">Personalized market analysis and recommendations</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-muted-foreground">Detailed property portfolio tailored to your goals</span>
+                  <span className="text-muted-foreground">Property portfolio tailored to your goals</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-muted-foreground">Complete support from initial consultation to key handover</span>
+                  <span className="text-muted-foreground">End-to-end support and guidance</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-muted-foreground">Ongoing relationship for future investment opportunities</span>
+                  <span className="text-muted-foreground">Ongoing partnership for future opportunities</span>
                 </div>
               </div>
             </div>
