@@ -5,26 +5,19 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Calendar, Mail, Phone, MessageSquare, ArrowRight } from "lucide-react";
 import apartmentInterior from "@/assets/lisbon-apartment-interior.jpg";
-
 const ContactSection = () => {
-  return (
-    <section className="py-20 bg-background relative overflow-hidden">
+  return <section className="py-20 bg-background relative overflow-hidden">
       {/* Background image with overlay */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center opacity-5"
-        style={{ backgroundImage: `url(${apartmentInterior})` }}
-      ></div>
+      <div className="absolute inset-0 bg-cover bg-center opacity-5" style={{
+      backgroundImage: `url(${apartmentInterior})`
+    }}></div>
       
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center space-y-4 mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground">
-            Hablemos de Inmuebles en Portugal
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            ¿Listo para explorar oportunidades de inversión en Portugal? Estoy aquí para guiarte. 
-            Elige cómo te gustaría conectar y comencemos a construir tu estrategia.
-          </p>
+          <h2 className="text-4xl lg:text-5xl font-bold text-foreground">Hablemos</h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">¿Listo para explorar oportunidades de inversión en Portugal?
+ Elige cómo te gustaría conectar y comencemos a construir tu estrategia.</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
@@ -65,11 +58,7 @@ const ContactSection = () => {
               
               <div className="space-y-2">
                 <Label htmlFor="message">Mensaje</Label>
-                <Textarea 
-                  id="message" 
-                  placeholder="Cuéntame sobre tus objetivos de inversión, plazos y preguntas específicas..."
-                  rows={4}
-                />
+                <Textarea id="message" placeholder="Cuéntame sobre tus objetivos de inversión, plazos y preguntas específicas..." rows={4} />
               </div>
               
               <Button variant="premium" size="lg" className="w-full group">
@@ -155,8 +144,6 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactSection;
