@@ -6,11 +6,11 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { label: "Home", href: "#home" },
-    { label: "Why Portugal", href: "#portugal" },
-    { label: "My Expertise", href: "#expertise" },
+    { label: "Inicio", href: "#home" },
+    { label: "Por qué Portugal", href: "#portugal" },
+    { label: "Mi Experiencia", href: "#expertise" },
     { label: "Seed Real Estate", href: "#seed" },
-    { label: "Contact", href: "#contact" },
+    { label: "Contacto", href: "#contact" },
   ];
 
   return (
@@ -23,8 +23,8 @@ const Navigation = () => {
               <span className="text-primary-foreground font-bold text-lg">BV</span>
             </div>
             <div>
-              <div className="font-bold text-foreground">Benjamin Valdivia</div>
-              <div className="text-xs text-muted-foreground">Real Estate Consultant</div>
+              <div className="font-bold text-foreground">Benjamín Valdivia</div>
+              <div className="text-xs text-muted-foreground">Consultor Inmobiliario</div>
             </div>
           </div>
 
@@ -45,7 +45,7 @@ const Navigation = () => {
           <div className="hidden md:block">
             <Button variant="premium" size="sm" className="group">
               <Calendar className="mr-2 h-4 w-4" />
-              Schedule Call
+              Agendar Llamada
             </Button>
           </div>
 
@@ -79,7 +79,7 @@ const Navigation = () => {
               ))}
               <Button variant="premium" size="sm" className="mt-4 w-full">
                 <Calendar className="mr-2 h-4 w-4" />
-                Schedule Call
+                Agendar Llamada
               </Button>
             </div>
           </div>

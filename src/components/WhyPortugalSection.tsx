@@ -6,50 +6,46 @@ const WhyPortugalSection = () => {
   const benefits = [
     {
       icon: Sun,
-      title: "Perfect Climate",
-      description: "300+ days of sunshine annually with mild winters. Ideal year-round living.",
+      title: "Clima Perfecto",
+      description: "300+ días de sol al año con inviernos suaves. Vida ideal todo el año.",
     },
     {
       icon: Shield,
-      title: "Safety & Security", 
-      description: "World's safest countries with low crime rates and political stability.",
+      title: "Seguridad", 
+      description: "Uno de los países más seguros con baja criminalidad y estabilidad política.",
     },
     {
       icon: Heart,
-      title: "Quality of Life",
-      description: "Rich culture, excellent healthcare, world-class cuisine, welcoming community.",
+      title: "Calidad de Vida",
+      description: "Rica cultura, excelente salud, gastronomía mundial, comunidad acogedora.",
     },
     {
       icon: TrendingUp,
-      title: "Market Growth",
-      description: "Property values grew 45% in 5 years with continued strong demand.",
+      title: "Crecimiento del Mercado",
+      description: "Propiedades crecieron 45% en 5 años con demanda fuerte continua.",
     },
     {
       icon: Globe,
-      title: "EU Access",
-      description: "Gateway to Europe with excellent connectivity and residency options.",
+      title: "Acceso UE",
+      description: "Puerta a Europa con excelente conectividad y opciones de residencia.",
     },
     {
       icon: MapPin,
-      title: "Strategic Location",
-      description: "Bridge between continents with Lisbon as a growing tech hub.",
+      title: "Ubicación Estratégica",
+      description: "Puente entre continentes con Lisboa como hub tecnológico creciente.",
     },
   ];
 
   return (
-    <section className="py-20 bg-card relative overflow-hidden">
-      {/* Floating elements */}
-      <div className="absolute top-10 right-10 w-32 h-32 bg-accent/10 rounded-full animate-pulse-glow"></div>
-      <div className="absolute bottom-20 left-20 w-20 h-20 bg-primary/10 rounded-full animate-float"></div>
-      
+    <section className="py-20 bg-card relative overflow-hidden">      
       <div className="container mx-auto px-6">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground">
-            Why Portugal & Lisbon?
+            ¿Por qué Portugal y Lisboa?
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Portugal offers the perfect combination of lifestyle, investment potential, and European access. 
-            Discover why international investors choose Portugal.
+            Portugal ofrece la combinación perfecta de estilo de vida, potencial de inversión y acceso europeo. 
+            Descubre por qué inversionistas internacionales eligen Portugal.
           </p>
         </div>
         
@@ -75,53 +71,91 @@ const WhyPortugalSection = () => {
           <div className="relative">
             <img
               src={lisbonBuilding}
-              alt="Luxury buildings in Lisbon"
-              className="w-full rounded-3xl shadow-floating animate-float-slow"
+              alt="Edificios de lujo en Lisboa"
+              className="w-full rounded-3xl shadow-elegant"
             />
             <div className="absolute inset-0 bg-gradient-hero rounded-3xl opacity-30"></div>
           </div>
           
           <div className="bg-gradient-subtle rounded-3xl p-8 lg:p-12 shadow-elegant">
             <h3 className="text-3xl font-bold text-foreground mb-6">
-              Lisbon: Europe's Rising Star
+              Lisboa: Estrella Emergente de Europa
             </h3>
             <div className="space-y-4 mb-8">
               <div className="flex items-center gap-4">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span className="text-muted-foreground">UNESCO World Heritage with stunning architecture</span>
+                <span className="text-muted-foreground">Patrimonio UNESCO con arquitectura impresionante</span>
               </div>
               <div className="flex items-center gap-4">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span className="text-muted-foreground">Growing tech hub attracting global companies</span>
+                <span className="text-muted-foreground">Hub tecnológico creciente atrayendo empresas globales</span>
               </div>
               <div className="flex items-center gap-4">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span className="text-muted-foreground">Excellent infrastructure and connectivity</span>
+                <span className="text-muted-foreground">Excelente infraestructura y conectividad</span>
               </div>
               <div className="flex items-center gap-4">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span className="text-muted-foreground">Vibrant cultural scene and lifestyle</span>
+                <span className="text-muted-foreground">Escena cultural vibrante y estilo de vida</span>
               </div>
             </div>
             
             <div className="grid grid-cols-2 gap-4">
               <div className="text-center p-4 bg-card rounded-2xl shadow-soft">
                 <div className="text-2xl font-bold text-primary mb-1">45%</div>
-                <div className="text-xs text-muted-foreground">Growth (5 years)</div>
+                <div className="text-xs text-muted-foreground">Crecimiento (5 años)</div>
               </div>
               <div className="text-center p-4 bg-card rounded-2xl shadow-soft">
                 <div className="text-2xl font-bold text-primary mb-1">€4.2B</div>
-                <div className="text-xs text-muted-foreground">Investment (2023)</div>
+                <div className="text-xs text-muted-foreground">Inversión (2023)</div>
               </div>
               <div className="text-center p-4 bg-card rounded-2xl shadow-soft">
                 <div className="text-2xl font-bold text-primary mb-1">85%</div>
-                <div className="text-xs text-muted-foreground">Int'l Interest</div>
+                <div className="text-xs text-muted-foreground">Interés Int'l</div>
               </div>
               <div className="text-center p-4 bg-card rounded-2xl shadow-soft">
                 <div className="text-2xl font-bold text-primary mb-1">12%</div>
-                <div className="text-xs text-muted-foreground">Annual Returns</div>
+                <div className="text-xs text-muted-foreground">Retornos Anuales</div>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Chilean Investment Section */}
+        <div className="mt-20 bg-card rounded-3xl p-8 lg:p-12 shadow-elegant border border-border">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-foreground mb-4">
+              Chilenos Invirtiendo en Europa
+            </h3>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              En los últimos años, más chilenos buscan diversificar en Europa, 
+              especialmente en Portugal por su estabilidad y potencial de crecimiento.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-primary mb-2">300%</div>
+              <div className="text-sm text-muted-foreground">Aumento inversión chilena</div>
+              <div className="text-xs text-muted-foreground mt-1">2019-2024</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-primary mb-2">€150M</div>
+              <div className="text-sm text-muted-foreground">Inversión chilena total</div>
+              <div className="text-xs text-muted-foreground mt-1">Portugal 2023</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-primary mb-2">Golden Visa</div>
+              <div className="text-sm text-muted-foreground">Programa más popular</div>
+              <div className="text-xs text-muted-foreground mt-1">Entre chilenos</div>
+            </div>
+          </div>
+          
+          <div className="mt-8 p-6 bg-gradient-subtle rounded-2xl">
+            <p className="text-center text-muted-foreground">
+              <strong>¿Por qué eligen Portugal?</strong> Chile y Portugal comparten valores: 
+              estabilidad, democracia fuerte, y oportunidades de crecimiento sostenible.
+            </p>
           </div>
         </div>
       </div>

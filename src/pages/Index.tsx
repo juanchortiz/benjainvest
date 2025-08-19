@@ -4,6 +4,7 @@ import WhyPortugalSection from "@/components/WhyPortugalSection";
 import ExpertiseSection from "@/components/ExpertiseSection";
 import SeedRealEstateSection from "@/components/SeedRealEstateSection";
 import ContactSection from "@/components/ContactSection";
+import StickyContactButton from "@/components/StickyContactButton";
 
 const Index = () => {
   return (
@@ -37,39 +38,40 @@ const Index = () => {
                   <span className="text-primary-foreground font-bold text-lg">BV</span>
                 </div>
                 <div>
-                  <div className="font-bold text-foreground">Benjamin Valdivia</div>
-                  <div className="text-xs text-muted-foreground">Real Estate Consultant</div>
+                  <div className="font-bold text-foreground">Benjamín Valdivia</div>
+                  <div className="text-xs text-muted-foreground">Consultor Inmobiliario</div>
                 </div>
               </div>
               <p className="text-muted-foreground text-sm">
-                Your strategic partner for real estate investment in Portugal.
+                Tu socio estratégico para inversión inmobiliaria en Portugal.
               </p>
             </div>
             
             <div>
-              <h4 className="font-semibold text-foreground mb-4">Contact</h4>
+              <h4 className="font-semibold text-foreground mb-4">Contacto</h4>
               <div className="space-y-2 text-sm text-muted-foreground">
                 <p>benjamin.valdivia@seedrealestate.pt</p>
                 <p>+351 XXX XXX XXX</p>
-                <p>Lisbon, Portugal</p>
+                <p>Lisboa, Portugal</p>
               </div>
             </div>
             
             <div>
               <h4 className="font-semibold text-foreground mb-4">Seed Real Estate</h4>
               <div className="space-y-2 text-sm text-muted-foreground">
-                <p>Leading real estate consultancy</p>
+                <p>Consultoría inmobiliaria líder</p>
                 <p>seedrealestate.pt</p>
-                <p>Serving international clients</p>
+                <p>Sirviendo clientes internacionales</p>
               </div>
             </div>
           </div>
           
           <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">
-            <p>&copy; 2024 Benjamin Valdivia. All rights reserved.</p>
+            <p>&copy; 2024 Benjamín Valdivia. Todos los derechos reservados.</p>
           </div>
         </div>
       </footer>
+      <StickyContactButton />
     </div>
   );
 };

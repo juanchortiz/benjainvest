@@ -6,28 +6,28 @@ const SeedRealEstateSection = () => {
   const advantages = [
     {
       icon: Database,
-      title: "Cutting-Edge Technology",
-      description: "Advanced CRM systems, market analytics, and proprietary tools for maximum efficiency and insights."
+      title: "Tecnología de Vanguardia",
+      description: "Sistemas CRM avanzados, análisis de mercado y herramientas propias para máxima eficiencia."
     },
     {
       icon: Users2,
-      title: "Expert Team",
-      description: "Collaborative network of specialists including legal, financial, and technical experts."
+      title: "Equipo Experto",
+      description: "Red colaborativa de especialistas incluyendo expertos legales, financieros y técnicos."
     },
     {
       icon: Zap,
-      title: "Fast Execution",
-      description: "Streamlined processes and established relationships for rapid transaction completion."
+      title: "Ejecución Rápida",
+      description: "Procesos optimizados y relaciones establecidas para completar transacciones rápidamente."
     },
     {
       icon: Shield,
-      title: "Risk Mitigation",
-      description: "Comprehensive due diligence and risk assessment protocols for every investment."
+      title: "Mitigación de Riesgos",
+      description: "Due diligence integral y protocolos de evaluación de riesgos para cada inversión."
     },
     {
       icon: Target,
-      title: "Market Intelligence",
-      description: "Deep local knowledge and real-time market data to identify the best opportunities."
+      title: "Inteligencia de Mercado",
+      description: "Conocimiento local profundo y datos en tiempo real para identificar las mejores oportunidades."
     }
   ];
 
@@ -36,11 +36,11 @@ const SeedRealEstateSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground">
-            Backed by <span className="bg-gradient-premium bg-clip-text text-transparent">Seed Real Estate</span>
+            Respaldado por <span className="bg-gradient-premium bg-clip-text text-transparent">Seed Real Estate</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            I'm proud to represent Seed Real Estate, Portugal's leading real estate consultancy. 
-            Together, we provide unmatched expertise, technology, and market access.
+            Me enorgullece representar a Seed Real Estate, la consultoría inmobiliaria líder de Portugal. 
+            Juntos brindamos experiencia, tecnología y acceso al mercado inigualables.
           </p>
         </div>
 
@@ -48,17 +48,17 @@ const SeedRealEstateSection = () => {
           <div className="space-y-8">
             <div>
               <h3 className="text-3xl font-bold text-foreground mb-6">
-                Why Seed Real Estate?
+                ¿Por qué Seed Real Estate?
               </h3>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                Seed Real Estate combines decades of market experience with innovative technology 
-                and a client-first approach. As your consultant within this powerhouse organization, 
-                I have access to exclusive listings, market intelligence, and resources that 
-                independent agents simply cannot match.
+                Seed Real Estate combina décadas de experiencia con tecnología innovadora 
+                y enfoque centrado en el cliente. Como tu consultor dentro de esta organización, 
+                tengo acceso a listados exclusivos, inteligencia de mercado y recursos que 
+                agentes independientes simplemente no pueden igualar.
               </p>
               
               <Button variant="outline" size="lg" className="group">
-                Visit Seed Real Estate
+                Visitar Seed Real Estate
                 <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
             </div>
@@ -105,24 +105,24 @@ const SeedRealEstateSection = () => {
 
         <div className="bg-card rounded-3xl p-8 lg:p-12 shadow-elegant border border-border text-center">
           <h3 className="text-3xl font-bold text-foreground mb-6">
-            The Seed Advantage in Numbers
+            La Ventaja de Seed en Números
           </h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div>
               <div className="text-4xl font-bold text-primary mb-2">€2B+</div>
-              <div className="text-muted-foreground">Total Transactions</div>
+              <div className="text-muted-foreground">Transacciones Totales</div>
             </div>
             <div>
               <div className="text-4xl font-bold text-primary mb-2">15+</div>
-              <div className="text-muted-foreground">Years Experience</div>
+              <div className="text-muted-foreground">Años de Experiencia</div>
             </div>
             <div>
               <div className="text-4xl font-bold text-primary mb-2">5000+</div>
-              <div className="text-muted-foreground">Properties Sold</div>
+              <div className="text-muted-foreground">Propiedades Vendidas</div>
             </div>
             <div>
               <div className="text-4xl font-bold text-primary mb-2">50+</div>
-              <div className="text-muted-foreground">Expert Team Members</div>
+              <div className="text-muted-foreground">Miembros del Equipo</div>
             </div>
           </div>
         </div>
