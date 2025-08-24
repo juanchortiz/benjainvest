@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { GraduationCap, TrendingUp, Users, Award, Building2, Globe2 } from "lucide-react";
+import { GraduationCap, TrendingUp, Users, Award } from "lucide-react";
 const ExpertiseSection = () => {
   const credentials = [{
     icon: GraduationCap,
@@ -19,7 +19,7 @@ const ExpertiseSection = () => {
     title: "Asesoría Estratégica",
     description: "Tu socio estratégico para construcción de riqueza a largo plazo"
   }];
-  const differentiators = ["Experiencia financiera sólida desde la banca", "Inteligencia de mercado profunda y análisis de datos", "Comunicación multilingüe (español, portugués, inglés)", "Desarrollo integral de estrategias de inversión", "Gestión completa de transacciones de extremo a extremo", "Soporte post-compra y optimización de portafolio"];
+  
   return <section className="py-20 bg-background relative overflow-hidden">      
       <div className="container mx-auto px-6">
         <div className="text-center space-y-4 mb-16">
@@ -33,9 +33,9 @@ const ExpertiseSection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-          <div>
-            <h3 className="text-3xl font-bold text-foreground mb-8">Mi Expertiz</h3>
+        <div className="flex justify-center">
+          <div className="max-w-4xl">
+            <h3 className="text-3xl font-bold text-foreground mb-8 text-center">Mi Expertiz</h3>
             <div className="grid sm:grid-cols-2 gap-6">
               {credentials.map((credential, index) => <Card key={index} className="border-border hover:shadow-soft transition-all duration-300">
                   <CardContent className="p-6">
@@ -50,21 +50,6 @@ const ExpertiseSection = () => {
                     </p>
                   </CardContent>
                 </Card>)}
-            </div>
-          </div>
-
-          <div className="relative">
-            <div className="bg-gradient-subtle rounded-3xl p-8 shadow-soft">
-              <div className="flex items-center gap-4 mb-6">
-                <Building2 className="h-8 w-8 text-primary" />
-                <h3 className="text-2xl font-bold text-foreground">Lo Que Me Diferencia</h3>
-              </div>
-              <div className="space-y-4">
-                {differentiators.map((item, index) => <div key={index} className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-muted-foreground">{item}</span>
-                  </div>)}
-              </div>
             </div>
           </div>
         </div>
