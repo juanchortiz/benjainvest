@@ -57,28 +57,8 @@ const HeroSection = () => {
               <img
                 src="/lovable-uploads/ea3f0f29-7c82-4629-9d31-bae94e10f0e9.png"
                 alt="Benjamín Valdivia - Consultor Inmobiliario"
-                className="w-full max-w-md mx-auto rounded-2xl shadow-elegant"
+                className="w-full max-w-md mx-auto rounded-2xl shadow-elegant bg-transparent"
               />
-            </div>
-            
-            <div className="absolute -top-8 -right-8 bg-card/90 backdrop-blur-sm rounded-xl p-4 shadow-elegant">
-              <div className="flex items-center gap-3">
-                <Building className="h-6 w-6 text-primary" />
-                <div>
-                  <div className="text-sm font-semibold text-foreground">Propiedades Premium</div>
-                  <div className="text-xs text-muted-foreground">Ubicaciones Prime</div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="absolute -bottom-8 -left-8 bg-card/90 backdrop-blur-sm rounded-xl p-4 shadow-elegant">
-              <div className="flex items-center gap-3">
-                <TrendingUp className="h-6 w-6 text-accent" />
-                <div>
-                  <div className="text-sm font-semibold text-foreground">45% Crecimiento</div>
-                  <div className="text-xs text-muted-foreground">Últimos 5 Años</div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
