@@ -15,11 +15,6 @@ const WhyPortugalSection = () => {
       description: "Uno de los países más seguros con baja criminalidad y estabilidad política.",
     },
     {
-      icon: Heart,
-      title: "Calidad de Vida",
-      description: "Rica cultura, excelente salud, gastronomía mundial, comunidad acogedora.",
-    },
-    {
       icon: TrendingUp,
       title: "Crecimiento del Mercado",
       description: "Propiedades crecieron 45% en 5 años con demanda fuerte continua.",
@@ -28,11 +23,6 @@ const WhyPortugalSection = () => {
       icon: Globe,
       title: "Acceso UE",
       description: "Puerta a Europa con excelente conectividad y opciones de residencia.",
-    },
-    {
-      icon: MapPin,
-      title: "Ubicación Estratégica",
-      description: "Puente entre continentes con Lisboa como hub tecnológico creciente.",
     },
   ];
 
