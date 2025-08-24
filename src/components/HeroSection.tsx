@@ -8,9 +8,9 @@ const HeroSection = () => {
       
       
       <div className="container mx-auto px-6 py-20 relative z-10">
-        <div className="grid lg:grid-cols-[2fr_1fr] gap-12 items-center">
-          {/* Content */}
-          <div className="space-y-8">
+        <div className="flex flex-col lg:flex-row items-center min-h-[80vh]">
+          {/* Content - 2/3 width */}
+          <div className="w-full lg:w-2/3 lg:pr-12 space-y-8">
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight">
                 Tu Socio Estratégico para 
@@ -52,12 +52,13 @@ const HeroSection = () => {
             </div>
           </div>
           
-          <div className="relative">
-            <div className="relative z-10">
+          {/* Image - 1/3 width */}
+          <div className="w-full lg:w-1/3 mt-8 lg:mt-0">
+            <div className="relative">
               <img
                 src="/lovable-uploads/ea3f0f29-7c82-4629-9d31-bae94e10f0e9.png"
                 alt="Benjamín Valdivia - Consultor Inmobiliario"
-                className="w-full max-w-md mx-auto rounded-2xl shadow-elegant bg-transparent"
+                className="w-full max-w-sm mx-auto lg:max-w-full rounded-2xl shadow-elegant bg-transparent"
               />
             </div>
           </div>
