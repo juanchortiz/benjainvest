@@ -1,18 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, Building, TrendingUp } from "lucide-react";
 import lisbonSkyline from "@/assets/lisbon-skyline.jpg";
+
 const HeroSection = () => {
-  return <section className="relative min-h-screen bg-gradient-hero flex items-center justify-center overflow-hidden">
-      {/* Background image */}
-      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" style={{
-      backgroundImage: `url(${lisbonSkyline})`
-    }}></div>
+  return (
+    <section className="relative min-h-screen bg-gradient-modern flex items-center justify-center overflow-hidden">
       
       
       <div className="container mx-auto px-6 py-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
-          <div className="space-y-8">
+        <div className="flex flex-col lg:flex-row items-center min-h-[80vh]">
+          {/* Content - 2/3 width */}
+          <div className="w-full lg:w-2/3 lg:pr-12 space-y-8">
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight">
                 Tu Socio Estratégico para 
@@ -25,7 +23,16 @@ const HeroSection = () => {
               </p>
             </div>
             
-            
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button variant="premium" size="xl" className="group shadow-elegant">
+                Agendar Consultoría
+                <Calendar className="ml-2 h-5 w-5 group-hover:rotate-12 transition-transform duration-300" />
+              </Button>
+              <Button variant="elegant" size="xl" className="group bg-accent text-accent-foreground hover:bg-accent/90">
+                Inicia Tu Inversión
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+              </Button>
+            </div>
             
             <div className="flex items-center gap-6 pt-6">
               <div className="text-center">
@@ -45,33 +52,20 @@ const HeroSection = () => {
             </div>
           </div>
           
-          <div className="relative">
-            <div className="relative z-10">
-              <img src="/lovable-uploads/ea3f0f29-7c82-4629-9d31-bae94e10f0e9.png" alt="Benjamín Valdivia - Consultor Inmobiliario" className="w-full max-w-md mx-auto rounded-2xl shadow-elegant" />
-            </div>
-            
-            <div className="absolute -top-8 -right-8 bg-card/90 backdrop-blur-sm rounded-xl p-4 shadow-elegant">
-              <div className="flex items-center gap-3">
-                <Building className="h-6 w-6 text-primary" />
-                <div>
-                  <div className="text-sm font-semibold text-foreground">Propiedades Premium</div>
-                  <div className="text-xs text-muted-foreground">Ubicaciones Prime</div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="absolute -bottom-8 -left-8 bg-card/90 backdrop-blur-sm rounded-xl p-4 shadow-elegant">
-              <div className="flex items-center gap-3">
-                <TrendingUp className="h-6 w-6 text-accent" />
-                <div>
-                  <div className="text-sm font-semibold text-foreground">45% Crecimiento</div>
-                  <div className="text-xs text-muted-foreground">Últimos 5 Años</div>
-                </div>
-              </div>
+          {/* Image - 1/3 width */}
+          <div className="w-full lg:w-1/3 mt-8 lg:mt-0">
+            <div className="relative">
+              <img
+                src="/lovable-uploads/ea3f0f29-7c82-4629-9d31-bae94e10f0e9.png"
+                alt="Benjamín Valdivia - Consultor Inmobiliario"
+                className="w-full max-w-sm mx-auto lg:max-w-full rounded-2xl shadow-elegant bg-transparent"
+              />
             </div>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default HeroSection;
