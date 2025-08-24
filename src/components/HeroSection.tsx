@@ -1,8 +1,34 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, Building, TrendingUp } from "lucide-react";
 import lisbonSkyline from "@/assets/lisbon-skyline.jpg";
+import { useState, useEffect } from "react";
+import { removeBackground, loadImage } from "@/utils/backgroundRemoval";
 
 const HeroSection = () => {
+  const [processedImageUrl, setProcessedImageUrl] = useState<string | null>(null);
+
+  useEffect(() => {
+    const processImage = async () => {
+      try {
+        // Load the original image
+        const response = await fetch("/lovable-uploads/ea3f0f29-7c82-4629-9d31-bae94e10f0e9.png");
+        const blob = await response.blob();
+        const imageElement = await loadImage(blob);
+        
+        // Remove background
+        const processedBlob = await removeBackground(imageElement);
+        const url = URL.createObjectURL(processedBlob);
+        setProcessedImageUrl(url);
+      } catch (error) {
+        console.error("Error processing image:", error);
+        // Fallback to original image
+        setProcessedImageUrl("/lovable-uploads/ea3f0f29-7c82-4629-9d31-bae94e10f0e9.png");
+      }
+    };
+
+    processImage();
+  }, []);
+
   return (
     <section className="relative min-h-screen bg-gradient-modern flex items-center justify-center overflow-hidden">
       
@@ -52,13 +78,17 @@ const HeroSection = () => {
             </div>
           </div>
           
-          <div className="relative">
-            <div className="relative z-10">
-              <img
-                src="/lovable-uploads/ea3f0f29-7c82-4629-9d31-bae94e10f0e9.png"
-                alt="Benjamín Valdivia - Consultor Inmobiliario"
-                className="w-full max-w-md mx-auto rounded-2xl shadow-elegant bg-transparent"
-              />
+          <div className="relative flex justify-end">
+            <div className="relative z-10 w-2/3">
+              {processedImageUrl ? (
+                <img
+                  src={processedImageUrl}
+                  alt="Benjamín Valdivia - Consultor Inmobiliario"
+                  className="w-full max-w-md ml-auto rounded-2xl shadow-elegant"
+                />
+              ) : (
+                <div className="w-full max-w-md ml-auto h-96 bg-muted rounded-2xl animate-pulse"></div>
+              )}
             </div>
           </div>
         </div>
