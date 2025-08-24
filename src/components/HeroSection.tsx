@@ -8,7 +8,7 @@ const HeroSection = () => {
       
       
       <div className="container mx-auto px-6 py-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-[2fr_1fr] gap-12 items-center">
           {/* Content */}
           <div className="space-y-8">
             <div className="space-y-4">
