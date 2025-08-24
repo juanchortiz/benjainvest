@@ -4,12 +4,7 @@ import lisbonSkyline from "@/assets/lisbon-skyline.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen bg-gradient-hero flex items-center justify-center overflow-hidden">
-      {/* Background image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
-        style={{ backgroundImage: `url(${lisbonSkyline})` }}
-      ></div>
+    <section className="relative min-h-screen bg-gradient-modern flex items-center justify-center overflow-hidden">
       
       
       <div className="container mx-auto px-6 py-20 relative z-10">

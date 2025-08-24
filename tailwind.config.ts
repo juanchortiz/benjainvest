@@ -71,7 +71,8 @@ export default {
 			backgroundImage: {
 				'gradient-premium': 'var(--gradient-premium)',
 				'gradient-subtle': 'var(--gradient-subtle)',
-				'gradient-hero': 'var(--gradient-hero)'
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-modern': 'var(--gradient-modern)'
 			},
 			boxShadow: {
 				'elegant': 'var(--shadow-elegant)',

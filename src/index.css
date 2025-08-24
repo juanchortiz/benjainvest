@@ -40,6 +40,7 @@ All colors MUST be HSL.
     --gradient-premium: linear-gradient(135deg, hsl(182 100% 9%), hsl(23 35% 60%));
     --gradient-subtle: linear-gradient(180deg, hsl(210 25% 98%), hsl(210 25% 95%));
     --gradient-hero: linear-gradient(135deg, hsl(182 100% 9% / 0.9), hsl(23 35% 60% / 0.8));
+    --gradient-modern: linear-gradient(135deg, hsl(182 100% 9%), hsl(23 35% 60%) 50%, hsl(182 100% 12%));
     
     /* Elegant shadows */
     --shadow-elegant: 0 10px 30px -10px hsl(182 100% 9% / 0.15);
