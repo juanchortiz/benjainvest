@@ -1,8 +1,51 @@
+import * as React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Sun, Shield, Heart, TrendingUp, Globe, MapPin } from "lucide-react";
-import lisbonBuilding from "@/assets/lisbon-luxury-building.jpg";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+  type CarouselApi,
+} from "@/components/ui/carousel";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const WhyPortugalSection = () => {
+  const [api, setApi] = React.useState<CarouselApi | null>(null);
+  const [paused, setPaused] = React.useState(false);
+
+  const lisbonImages = [
+    {
+      src: "/lovable-uploads/8ebf12d9-ebfb-4fa8-9fe5-67bae50ea031.png",
+      alt: "Coloridos edificios de Lisboa con terrazas para comer al aire libre"
+    },
+    {
+      src: "/lovable-uploads/b4642e83-c8d5-4fc5-8084-baf16da05e1f.png", 
+      alt: "Puente de Lisboa con bandera portuguesa en primer plano"
+    },
+    {
+      src: "/lovable-uploads/2de1b045-14e5-40b0-92a5-f3c43e96e035.png",
+      alt: "Ciclistas junto al río con el puente de Lisboa al fondo"
+    },
+    {
+      src: "/lovable-uploads/70708b46-c426-4025-afc9-6e6ada93ca11.png",
+      alt: "Arquitectura tradicional portuguesa con edificios coloridos"
+    }
+  ];
+
+  React.useEffect(() => {
+    if (!api) return;
+    
+    const interval = setInterval(() => {
+      if (!paused) {
+        api.scrollNext();
+      }
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [api, paused]);
+
   const benefits = [
     {
       icon: Sun,
@@ -58,13 +101,30 @@ const WhyPortugalSection = () => {
         </div>
         
         <div className="mt-16 grid lg:grid-cols-2 gap-12 items-center">
-          <div className="relative">
-            <img
-              src={lisbonBuilding}
-              alt="Edificios de lujo en Lisboa"
-              className="w-full rounded-3xl shadow-elegant"
-            />
-            <div className="absolute inset-0 bg-gradient-hero rounded-3xl opacity-30"></div>
+          <div 
+            className="relative rounded-3xl shadow-elegant overflow-hidden"
+            onMouseEnter={() => setPaused(true)}
+            onMouseLeave={() => setPaused(false)}
+          >
+            <Carousel setApi={setApi} className="w-full">
+              <CarouselContent>
+                {lisbonImages.map((image, index) => (
+                  <CarouselItem key={index}>
+                    <AspectRatio ratio={16 / 9}>
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        loading="lazy"
+                        className="w-full h-full object-cover"
+                      />
+                    </AspectRatio>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-4 top-1/2 -translate-y-1/2" />
+              <CarouselNext className="right-4 top-1/2 -translate-y-1/2" />
+            </Carousel>
+            <div className="absolute inset-0 bg-gradient-hero opacity-30 pointer-events-none"></div>
           </div>
           
           <div className="bg-gradient-subtle rounded-3xl p-8 lg:p-12 shadow-elegant">
