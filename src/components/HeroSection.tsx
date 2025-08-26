@@ -22,7 +22,7 @@ const HeroSection = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="premium" size="xl" className="group shadow-elegant border border-white/20">
+              <Button variant="premium" size="xl" className="group shadow-elegant border border-white">
                 Agendar Consultoría
                 <Calendar className="ml-2 h-5 w-5 group-hover:rotate-12 transition-transform duration-300" />
               </Button>
