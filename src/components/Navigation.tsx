@@ -33,7 +33,7 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navItems.map(item => <a key={item.label} href={item.href} className="text-muted-foreground hover:text-foreground transition-colors duration-300">
+            {navItems.map(item => <a key={item.label} href={item.href} className="text-sm text-foreground/80 hover:text-foreground transition-colors duration-300">
                 {item.label}
               </a>)}
           </div>
