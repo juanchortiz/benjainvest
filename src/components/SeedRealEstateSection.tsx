@@ -1,38 +1,29 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Database, Users2, Zap, Shield, Target } from "lucide-react";
-
 const SeedRealEstateSection = () => {
-  const advantages = [
-    {
-      icon: Database,
-      title: "Tecnología de Vanguardia",
-      description: "Sistemas CRM avanzados, análisis de mercado y herramientas propias para máxima eficiencia."
-    },
-    {
-      icon: Users2,
-      title: "Equipo Experto",
-      description: "Red colaborativa de especialistas incluyendo expertos legales, financieros y técnicos."
-    },
-    {
-      icon: Zap,
-      title: "Ejecución Rápida",
-      description: "Procesos optimizados y relaciones establecidas para completar transacciones rápidamente."
-    },
-    {
-      icon: Shield,
-      title: "Mitigación de Riesgos",
-      description: "Due diligence integral y protocolos de evaluación de riesgos para cada inversión."
-    },
-    {
-      icon: Target,
-      title: "Inteligencia de Mercado",
-      description: "Conocimiento local profundo y datos en tiempo real para identificar las mejores oportunidades."
-    }
-  ];
-
-  return (
-    <section className="py-20 bg-gradient-subtle">
+  const advantages = [{
+    icon: Database,
+    title: "Tecnología de Vanguardia",
+    description: "Sistemas CRM avanzados, análisis de mercado y herramientas propias para máxima eficiencia."
+  }, {
+    icon: Users2,
+    title: "Equipo Experto",
+    description: "Red colaborativa de especialistas incluyendo expertos legales, financieros y técnicos."
+  }, {
+    icon: Zap,
+    title: "Ejecución Rápida",
+    description: "Procesos optimizados y relaciones establecidas para completar transacciones rápidamente."
+  }, {
+    icon: Shield,
+    title: "Mitigación de Riesgos",
+    description: "Due diligence integral y protocolos de evaluación de riesgos para cada inversión."
+  }, {
+    icon: Target,
+    title: "Inteligencia de Mercado",
+    description: "Conocimiento local profundo y datos en tiempo real para identificar las mejores oportunidades."
+  }];
+  return <section className="py-20 bg-gradient-subtle">
       <div className="container mx-auto px-6">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground">
@@ -64,30 +55,11 @@ const SeedRealEstateSection = () => {
             </div>
           </div>
 
-          <div className="grid gap-6">
-            {advantages.slice(0, 3).map((advantage, index) => (
-              <Card key={index} className="border-border hover:shadow-soft transition-all duration-300">
-                <CardContent className="p-6 flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <advantage.icon className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-2">
-                      {advantage.title}
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      {advantage.description}
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+          
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          {advantages.slice(3).map((advantage, index) => (
-            <Card key={index + 3} className="border-border hover:shadow-soft transition-all duration-300">
+          {advantages.slice(3).map((advantage, index) => <Card key={index + 3} className="border-border hover:shadow-soft transition-all duration-300">
               <CardContent className="p-8">
                 <div className="w-16 h-16 bg-gradient-premium rounded-2xl flex items-center justify-center mb-6">
                   <advantage.icon className="h-8 w-8 text-primary-foreground" />
@@ -99,8 +71,7 @@ const SeedRealEstateSection = () => {
                   {advantage.description}
                 </p>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
         <div className="bg-card rounded-3xl p-8 lg:p-12 shadow-elegant border border-border text-center">
@@ -127,8 +98,6 @@ const SeedRealEstateSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default SeedRealEstateSection;
