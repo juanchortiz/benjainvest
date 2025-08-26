@@ -1,10 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, Building, TrendingUp } from "lucide-react";
 import lisbonSkyline from "@/assets/lisbon-skyline.jpg";
-
 const HeroSection = () => {
-  return (
-    <section className="relative min-h-screen bg-gradient-modern flex items-center justify-center overflow-hidden">
+  return <section className="relative min-h-screen bg-gradient-modern flex items-center justify-center overflow-hidden">
       
       
       <div className="container mx-auto px-6 py-20 relative z-10">
@@ -28,10 +26,7 @@ const HeroSection = () => {
                 Agendar Consultoría
                 <Calendar className="ml-2 h-5 w-5 group-hover:rotate-12 transition-transform duration-300" />
               </Button>
-              <Button variant="elegant" size="xl" className="group bg-accent text-accent-foreground hover:bg-accent/90">
-                Inicia Tu Inversión
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </Button>
+              
             </div>
             
             <div className="flex items-center gap-6 pt-6">
@@ -55,17 +50,11 @@ const HeroSection = () => {
           {/* Image - 1/3 width */}
           <div className="w-full lg:w-1/3 mt-8 lg:mt-0">
             <div className="relative">
-              <img
-                src="/lovable-uploads/ea3f0f29-7c82-4629-9d31-bae94e10f0e9.png"
-                alt="Benjamín Valdivia - Consultor Inmobiliario"
-                className="w-full max-w-sm mx-auto lg:max-w-full rounded-2xl shadow-elegant bg-transparent"
-              />
+              <img src="/lovable-uploads/ea3f0f29-7c82-4629-9d31-bae94e10f0e9.png" alt="Benjamín Valdivia - Consultor Inmobiliario" className="w-full max-w-sm mx-auto lg:max-w-full rounded-2xl shadow-elegant bg-transparent" />
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
