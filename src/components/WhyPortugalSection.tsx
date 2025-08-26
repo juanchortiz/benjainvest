@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Sun, Shield, Heart, TrendingUp, Globe, MapPin } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext, type CarouselApi } from "@/components/ui/carousel";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import ContactSection from "@/components/ContactSection";
 const WhyPortugalSection = () => {
   const [api, setApi] = React.useState<CarouselApi | null>(null);
   const [paused, setPaused] = React.useState(false);
@@ -131,6 +132,11 @@ const WhyPortugalSection = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Contact Section */}
+        <div className="mt-20">
+          <ContactSection />
         </div>
 
         {/* Chilean Investment Section */}

@@ -23,9 +23,6 @@ const Index = () => {
         <section id="seed">
           <SeedRealEstateSection />
         </section>
-        <section id="contact">
-          <ContactSection />
-        </section>
       </main>
       
       {/* Footer */}
