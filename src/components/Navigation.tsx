@@ -4,9 +4,6 @@ import { Menu, X, Calendar } from "lucide-react";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navItems = [{
-    label: "Inicio",
-    href: "#home"
-  }, {
     label: "Por qué Portugal",
     href: "#portugal"
   }, {
