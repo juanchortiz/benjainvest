@@ -64,7 +64,7 @@ const SeedRealEstateSection = () => {
             <AspectRatio ratio={16/9} className="rounded-2xl overflow-hidden shadow-elegant">
               {isVideoVisible && (
                 <iframe
-                  src="https://www.youtube.com/embed/J9L7ijKc2uo?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&showinfo=0&fs=0&cc_load_policy=0&iv_load_policy=3&autohide=1"
+                  src="https://www.youtube.com/embed/J9L7ijKc2uo?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&showinfo=0&fs=0&cc_load_policy=0&iv_load_policy=3&autohide=1&loop=1&playlist=J9L7ijKc2uo&disablekb=1&start=0"
                   title="Seed Real Estate Presentation"
                   className="w-full h-full border-0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
