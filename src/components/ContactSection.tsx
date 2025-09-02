@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Calendar, Mail, Phone, MessageSquare, ArrowRight } from "lucide-react";
 import apartmentInterior from "@/assets/lisbon-apartment-interior.jpg";
+import { openGoogleCalendarBooking } from "@/utils/googleCalendar";
 const ContactSection = () => {
   return <section className="py-20 bg-background relative overflow-hidden">
       {/* Background image with overlay */}
@@ -84,7 +85,7 @@ const ContactSection = () => {
                 <p className="text-muted-foreground mb-6">
                   Obtén consejos personalizados e insights del mercado en una sesión dedicada.
                 </p>
-                <Button variant="outline" size="lg" className="w-full">
+                <Button variant="outline" size="lg" className="w-full" onClick={openGoogleCalendarBooking}>
                   Reservar Llamada de Consultoría
                 </Button>
               </CardContent>

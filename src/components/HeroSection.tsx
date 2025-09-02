@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, Building, TrendingUp } from "lucide-react";
 import lisbonSkyline from "@/assets/lisbon-skyline.jpg";
+import { openGoogleCalendarBooking } from "@/utils/googleCalendar";
 const HeroSection = () => {
   return <section className="relative min-h-screen bg-gradient-modern flex items-center justify-center overflow-hidden">
       
@@ -22,7 +23,7 @@ const HeroSection = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="premium" size="xl" className="group shadow-elegant border border-white">
+              <Button variant="premium" size="xl" className="group shadow-elegant border border-white" onClick={openGoogleCalendarBooking}>
                 Agendar Consultoría
                 <Calendar className="ml-2 h-5 w-5 group-hover:rotate-12 transition-transform duration-300" />
               </Button>

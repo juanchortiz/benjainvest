@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Calendar } from "lucide-react";
+import { openGoogleCalendarBooking } from "@/utils/googleCalendar";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navItems = [{
@@ -37,7 +38,7 @@ const Navigation = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="premium" size="sm" className="group">
+            <Button variant="premium" size="sm" className="group" onClick={openGoogleCalendarBooking}>
               <Calendar className="mr-2 h-4 w-4" />
               Agendar Llamada
             </Button>
@@ -55,7 +56,7 @@ const Navigation = () => {
               {navItems.map(item => <a key={item.label} href={item.href} className="text-muted-foreground hover:text-foreground transition-colors duration-300 py-2" onClick={() => setIsOpen(false)}>
                   {item.label}
                 </a>)}
-              <Button variant="premium" size="sm" className="mt-4 w-full">
+              <Button variant="premium" size="sm" className="mt-4 w-full" onClick={openGoogleCalendarBooking}>
                 <Calendar className="mr-2 h-4 w-4" />
                 Agendar Llamada
               </Button>
