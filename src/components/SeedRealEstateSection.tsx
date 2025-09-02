@@ -1,7 +1,30 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Database, Users2, Zap, Shield, Target } from "lucide-react";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import React from "react";
 const SeedRealEstateSection = () => {
+  const [isVideoVisible, setIsVideoVisible] = React.useState(false);
+  const videoRef = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVideoVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   const advantages = [{
     icon: Database,
     title: "Tecnología de Vanguardia",
@@ -33,6 +56,23 @@ const SeedRealEstateSection = () => {
             Me enorgullece representar a Seed Real Estate, la consultoría inmobiliaria líder de Portugal. 
             Juntos brindamos experiencia, tecnología y acceso al mercado inigualables.
           </p>
+        </div>
+
+        {/* Video Section */}
+        <div ref={videoRef} className="mb-16">
+          <div className="max-w-4xl mx-auto">
+            <AspectRatio ratio={16/9} className="rounded-2xl overflow-hidden shadow-elegant">
+              {isVideoVisible && (
+                <iframe
+                  src="https://www.youtube.com/embed/J9L7ijKc2uo?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&showinfo=0&fs=0&cc_load_policy=0&iv_load_policy=3&autohide=1"
+                  title="Seed Real Estate Presentation"
+                  className="w-full h-full border-0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              )}
+            </AspectRatio>
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
