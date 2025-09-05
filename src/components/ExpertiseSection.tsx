@@ -32,7 +32,7 @@ const ExpertiseSection = () => {
         <div className="flex justify-center">
           <div className="max-w-4xl">
             <h3 className="text-3xl font-bold text-foreground mb-8 text-center">Mi Expertiz</h3>
-            <div className="grid sm:grid-cols-2 gap-6">
+            <div className="grid sm:grid-cols-3 gap-6">
               {credentials.map((credential, index) => <Card key={index} className="border-border hover:shadow-soft transition-all duration-300">
                   <CardContent className="p-6">
                     <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">

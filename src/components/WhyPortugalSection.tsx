@@ -109,7 +109,7 @@ const WhyPortugalSection = () => {
               </div>
             </div>
             
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-3 gap-4">
               <div className="text-center p-4 bg-card rounded-2xl shadow-soft">
                 <div className="text-2xl font-bold text-primary mb-1">45%</div>
                 <div className="text-xs text-muted-foreground">Crecimiento (5 años)</div>
@@ -117,10 +117,6 @@ const WhyPortugalSection = () => {
               <div className="text-center p-4 bg-card rounded-2xl shadow-soft">
                 <div className="text-2xl font-bold text-primary mb-1">€4.2B</div>
                 <div className="text-xs text-muted-foreground">Inversión (2023)</div>
-              </div>
-              <div className="text-center p-4 bg-card rounded-2xl shadow-soft">
-                <div className="text-2xl font-bold text-primary mb-1">85%</div>
-                <div className="text-xs text-muted-foreground">Interés Int'l</div>
               </div>
               <div className="text-center p-4 bg-card rounded-2xl shadow-soft">
                 <div className="text-2xl font-bold text-primary mb-1">12%</div>
