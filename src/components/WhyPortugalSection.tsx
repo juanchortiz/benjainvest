@@ -38,10 +38,6 @@ const WhyPortugalSection = () => {
     title: "Seguridad",
     description: "Uno de los países más seguros con baja criminalidad y estabilidad política."
   }, {
-    icon: TrendingUp,
-    title: "Crecimiento del Mercado",
-    description: "Propiedades crecieron 45% en 5 años con demanda fuerte continua."
-  }, {
     icon: Globe,
     title: "Acceso UE",
     description: "Puerta a Europa con excelente conectividad y opciones de residencia."
