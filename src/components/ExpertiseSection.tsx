@@ -14,10 +14,6 @@ const ExpertiseSection = () => {
     icon: Users,
     title: "Enfoque Internacional",
     description: "Especializado en servir inversionistas internacionales de alto patrimonio"
-  }, {
-    icon: Award,
-    title: "Asesoría Estratégica",
-    description: "Tu socio estratégico para construcción de riqueza a largo plazo"
   }];
   
   return <section className="py-20 bg-background relative overflow-hidden">      
