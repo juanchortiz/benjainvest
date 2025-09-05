@@ -7,21 +7,21 @@ import { Calendar, Mail, Phone, MessageSquare, ArrowRight } from "lucide-react";
 import apartmentInterior from "@/assets/lisbon-apartment-interior.jpg";
 import { openGoogleCalendarBooking } from "@/utils/googleCalendar";
 const ContactSection = () => {
-  return <section className="py-20 bg-background relative overflow-hidden">
+  return <section className="py-12 md:py-20 bg-background relative overflow-hidden">
       {/* Background image with overlay */}
       <div className="absolute inset-0 bg-cover bg-center opacity-5" style={{
       backgroundImage: `url(${apartmentInterior})`
     }}></div>
       
       
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center space-y-4 mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground">Hablemos</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">¿Listo para explorar oportunidades de inversión en Portugal?
- Elige cómo te gustaría conectar y comencemos a construir tu estrategia.</p>
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
+        <div className="text-center space-y-4 mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">Hablemos</h2>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">¿Listo para explorar oportunidades de inversión en Portugal?
+ Elige cómo te gustaría conectar y comencemos a construir tu estrategia.</p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
           {/* Contact Form */}
           <Card className="shadow-elegant border-border">
             <CardHeader>
@@ -70,9 +70,9 @@ const ContactSection = () => {
           </Card>
 
           {/* Quick Contact Options */}
-          <div className="space-y-8">
+          <div className="space-y-6 md:space-y-8">
             <Card className="shadow-soft border-border hover:shadow-elegant transition-all duration-300">
-              <CardContent className="p-8">
+              <CardContent className="p-6 md:p-8">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-premium rounded-2xl flex items-center justify-center">
                     <Calendar className="h-8 w-8 text-primary-foreground" />
@@ -91,7 +91,7 @@ const ContactSection = () => {
               </CardContent>
             </Card>
 
-            <div className="grid sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
               <Card className="shadow-soft border-border hover:shadow-elegant transition-all duration-300">
                 <CardContent className="p-6 text-center">
                   <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -119,7 +119,7 @@ const ContactSection = () => {
               </Card>
             </div>
 
-            <div className="bg-gradient-subtle rounded-3xl p-8">
+            <div className="bg-gradient-subtle rounded-3xl p-6 md:p-8">
               <h3 className="text-2xl font-bold text-foreground mb-4">
                 Qué Esperar
               </h3>
