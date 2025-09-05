@@ -88,7 +88,12 @@ const SeedRealEstateSection = () => {
                 agentes independientes simplemente no pueden igualar.
               </p>
               
-              <Button variant="outline" size="lg" className="group">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="group"
+                onClick={() => window.open('https://www.seedrealestate.pt/pt', '_blank')}
+              >
                 Visitar Seed Real Estate
                 <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
