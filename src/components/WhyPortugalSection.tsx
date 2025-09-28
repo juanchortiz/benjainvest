@@ -4,6 +4,7 @@ import { Sun, Shield, Heart, TrendingUp, Globe, MapPin } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext, type CarouselApi } from "@/components/ui/carousel";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import ContactSection from "@/components/ContactSection";
+import GoldenVisaSection from "@/components/GoldenVisaSection";
 const WhyPortugalSection = () => {
   const [api, setApi] = React.useState<CarouselApi | null>(null);
   const [paused, setPaused] = React.useState(false);
@@ -165,6 +166,11 @@ const WhyPortugalSection = () => {
               estabilidad, democracia fuerte, y oportunidades de crecimiento sostenible.
             </p>
           </div>
+        </div>
+        
+        {/* Golden Visa Section */}
+        <div className="mt-20">
+          <GoldenVisaSection />
         </div>
       </div>
     </section>;

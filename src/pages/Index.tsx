@@ -47,8 +47,8 @@ const Index = () => {
             <div>
               <h4 className="font-semibold text-foreground mb-4">Contacto</h4>
               <div className="space-y-2 text-sm text-muted-foreground">
-                <p>benjamin.valdivia@seedrealestate.pt</p>
-                <p>+351 XXX XXX XXX</p>
+                <p><a href="mailto:benjamin@seedrealestate.pt" className="hover:text-primary transition-colors">benjamin@seedrealestate.pt</a></p>
+                <p><a href="tel:+351937958969" className="hover:text-primary transition-colors">+351 937 958 969</a></p>
                 <p>Lisboa, Portugal</p>
               </div>
             </div>

@@ -78,7 +78,7 @@ const ContactSection = () => {
                     <Calendar className="h-6 w-6 md:h-8 md:w-8 text-primary-foreground" />
                   </div>
                   <div>
-                    <h3 className="text-lg md:text-xl font-semibold text-foreground">Agendar Consultoría</h3>
+                    <h3 className="text-lg md:text-xl font-semibold text-foreground">Agendar Consultoría Gratis</h3>
                     <p className="text-muted-foreground">Reserva una videollamada de 30 minutos</p>
                   </div>
                 </div>
@@ -86,7 +86,7 @@ const ContactSection = () => {
                   Obtén consejos personalizados e insights del mercado en una sesión dedicada.
                 </p>
                 <Button variant="outline" size="lg" className="w-full" onClick={openGoogleCalendarBooking}>
-                  Reservar Llamada de Consultoría
+                  Reservar Llamada de Consultoría Gratis
                 </Button>
               </CardContent>
             </Card>
@@ -99,9 +99,11 @@ const ContactSection = () => {
                   </div>
                   <h4 className="font-semibold text-foreground mb-2">Email</h4>
                   <p className="text-sm text-muted-foreground mb-4">
-                    benjamin.valdivia@seedrealestate.pt
+                    benjamin@seedrealestate.pt
                   </p>
-                  <Button variant="ghost" size="sm" className="w-full sm:w-auto">Contactar</Button>
+                  <Button variant="ghost" size="sm" className="w-full sm:w-auto" asChild>
+                    <a href="mailto:benjamin@seedrealestate.pt">Contactar</a>
+                  </Button>
                 </CardContent>
               </Card>
 
@@ -112,9 +114,11 @@ const ContactSection = () => {
                   </div>
                   <h4 className="font-semibold text-foreground mb-2">Teléfono</h4>
                   <p className="text-sm text-muted-foreground mb-4">
-                    +351 XXX XXX XXX
+                    +351 937 958 969
                   </p>
-                  <Button variant="ghost" size="sm" className="w-full sm:w-auto">Llamar Ahora</Button>
+                  <Button variant="ghost" size="sm" className="w-full sm:w-auto" asChild>
+                    <a href="tel:+351937958969">Llamar Ahora</a>
+                  </Button>
                 </CardContent>
               </Card>
             </div>
