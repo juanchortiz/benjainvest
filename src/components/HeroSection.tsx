@@ -33,7 +33,7 @@ const HeroSection = () => {
           {/* Image - 1/3 width */}
           <div className="w-full lg:w-1/3 mt-8 lg:mt-0">
             <div className="relative">
-              <img src="/lovable-uploads/benjamin-valdivia-professional.jpg" alt="Benjamín Valdivia - Consultor Inmobiliario" className="w-full max-w-sm mx-auto lg:max-w-full rounded-2xl shadow-elegant bg-transparent" />
+              <img src="/lovable-uploads/benjamin-valdivia-new.jpg" alt="Benjamín Valdivia - Consultor Inmobiliario" className="w-full max-w-sm mx-auto lg:max-w-full rounded-2xl shadow-elegant bg-transparent" />
             </div>
           </div>
         </div>
