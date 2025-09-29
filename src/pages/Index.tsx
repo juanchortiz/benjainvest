@@ -5,10 +5,8 @@ import ExpertiseSection from "@/components/ExpertiseSection";
 import SeedRealEstateSection from "@/components/SeedRealEstateSection";
 import ContactSection from "@/components/ContactSection";
 import StickyContactButton from "@/components/StickyContactButton";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Navigation />
       <main>
         <section id="home">
@@ -53,14 +51,7 @@ const Index = () => {
               </div>
             </div>
             
-            <div>
-              <h4 className="font-semibold text-foreground mb-4">Seed Real Estate</h4>
-              <div className="space-y-2 text-sm text-muted-foreground">
-                <p>Consultoría inmobiliaria líder</p>
-                <p>seedrealestate.pt</p>
-                <p>Sirviendo clientes internacionales</p>
-              </div>
-            </div>
+            
           </div>
           
           <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">
@@ -69,8 +60,6 @@ const Index = () => {
         </div>
       </footer>
       <StickyContactButton />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
