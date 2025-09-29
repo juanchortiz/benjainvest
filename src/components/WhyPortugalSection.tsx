@@ -133,40 +133,7 @@ const WhyPortugalSection = () => {
         </div>
 
         {/* Chilean Investment Section */}
-        <div className="mt-20 bg-card rounded-3xl p-8 lg:p-12 shadow-elegant border border-border">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-foreground mb-4">🇨🇱 Chilenos Invirtiendo en Europa</h3>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              En los últimos años, más chilenos buscan diversificar en Europa, 
-              especialmente en Portugal por su estabilidad y potencial de crecimiento.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">300%</div>
-              <div className="text-sm text-muted-foreground">Aumento inversión chilena</div>
-              <div className="text-xs text-muted-foreground mt-1">2019-2024</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">€150M</div>
-              <div className="text-sm text-muted-foreground">Inversión chilena total</div>
-              <div className="text-xs text-muted-foreground mt-1">Portugal 2023</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">Golden Visa</div>
-              <div className="text-sm text-muted-foreground">Programa más popular</div>
-              <div className="text-xs text-muted-foreground mt-1">Entre chilenos</div>
-            </div>
-          </div>
-          
-          <div className="mt-8 p-6 bg-gradient-subtle rounded-2xl">
-            <p className="text-center text-muted-foreground">
-              <strong>¿Por qué eligen Portugal?</strong> Chile y Portugal comparten valores: 
-              estabilidad, democracia fuerte, y oportunidades de crecimiento sostenible.
-            </p>
-          </div>
-        </div>
+        
         
         {/* Golden Visa Section */}
         <div className="mt-20">
