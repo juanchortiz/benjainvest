@@ -11,8 +11,8 @@ const Navigation = () => {
     label: "Mi Experiencia",
     href: "#expertise"
   }, {
-    label: "Seed Real Estate",
-    href: "#seed"
+    label: "Golden Visa",
+    href: "#golden-visa"
   }, {
     label: "Contacto",
     href: "#contact"

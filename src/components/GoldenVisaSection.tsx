@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Check, Info, Building } from "lucide-react";
 import lisbonLuxuryBuilding from "@/assets/lisbon-luxury-building.jpg";
 const GoldenVisaSection = () => {
-  return <section className="py-20 bg-background relative overflow-hidden">
+  return <section id="golden-visa" className="py-20 bg-background relative overflow-hidden">
       {/* Background image with overlay */}
       <div className="absolute inset-0 bg-cover bg-center opacity-10" style={{
       backgroundImage: `url(${lisbonLuxuryBuilding})`
