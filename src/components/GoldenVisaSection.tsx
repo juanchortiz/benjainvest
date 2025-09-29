@@ -1,15 +1,12 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, Info, Building } from "lucide-react";
 import lisbonLuxuryBuilding from "@/assets/lisbon-luxury-building.jpg";
-
 const GoldenVisaSection = () => {
-  return (
-    <section className="py-20 bg-background relative overflow-hidden">
+  return <section className="py-20 bg-background relative overflow-hidden">
       {/* Background image with overlay */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center opacity-10" 
-        style={{ backgroundImage: `url(${lisbonLuxuryBuilding})` }}
-      ></div>
+      <div className="absolute inset-0 bg-cover bg-center opacity-10" style={{
+      backgroundImage: `url(${lisbonLuxuryBuilding})`
+    }}></div>
       <div className="absolute inset-0 bg-gradient-to-br from-background/80 to-background/60"></div>
       
       <div className="container mx-auto px-6 relative z-10">
@@ -120,25 +117,11 @@ const GoldenVisaSection = () => {
               </Card>
               
               {/* CTA Card */}
-              <Card className="shadow-elegant border-primary/20 bg-gradient-premium/10 backdrop-blur-sm">
-                <CardContent className="p-6 text-center">
-                  <h4 className="text-xl font-bold text-foreground mb-3">
-                    ¿Necesitas Orientación?
-                  </h4>
-                  <p className="text-muted-foreground mb-4">
-                    Te ayudo a navegar estas nuevas opciones y encontrar la mejor estrategia para tu situación.
-                  </p>
-                  <div className="text-sm text-primary font-semibold">
-                    📞 Consultoría especializada disponible
-                  </div>
-                </CardContent>
-              </Card>
+              
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default GoldenVisaSection;

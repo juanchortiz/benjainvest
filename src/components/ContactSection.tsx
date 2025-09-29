@@ -17,8 +17,7 @@ const ContactSection = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center space-y-4 mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">Hablemos</h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">¿Listo para explorar oportunidades de inversión en Portugal?
- Elige cómo te gustaría conectar y comencemos a construir tu estrategia.</p>
+          
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 md:gap-12">
