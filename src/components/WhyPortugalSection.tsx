@@ -111,19 +111,27 @@ const WhyPortugalSection = () => {
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              <div className="hidden md:block text-center p-4 bg-card rounded-2xl shadow-soft">
-                <div className="text-2xl font-bold text-primary mb-1">45%</div>
-                <div className="text-xs text-muted-foreground">Crecimiento (5 años)</div>
+              <div className="text-center p-4 bg-card rounded-2xl shadow-soft">
+                <div className="text-2xl font-bold text-primary mb-1">7%</div>
+                <div className="text-xs text-muted-foreground">Rentabilidad Alquiler</div>
               </div>
               <div className="text-center p-4 bg-card rounded-2xl shadow-soft">
-                <div className="text-2xl font-bold text-primary mb-1">€4.2B</div>
-                <div className="text-xs text-muted-foreground">Inversión (2023)</div>
+                <div className="text-2xl font-bold text-primary mb-1">€7.3B</div>
+                <div className="text-xs text-muted-foreground">Inversión Extranjera</div>
               </div>
               <div className="text-center p-4 bg-card rounded-2xl shadow-soft">
-                <div className="text-2xl font-bold text-primary mb-1">12%</div>
-                <div className="text-xs text-muted-foreground">Retornos Anuales</div>
+                <div className="text-2xl font-bold text-primary mb-1">18.3%</div>
+                <div className="text-xs text-muted-foreground">Apreciación Inmobiliaria</div>
               </div>
             </div>
+            <a 
+              href="https://www.idealista.pt/news/imobiliario/habitacao/2025/09/22/71712-venda-de-casas-volta-a-crescer-e-preco-atinge-maior-subida-de-sempre" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-xs text-muted-foreground/60 hover:text-muted-foreground transition-colors mt-4 inline-block"
+            >
+              Fuente: Idealista.pt
+            </a>
           </div>
         </div>
 
