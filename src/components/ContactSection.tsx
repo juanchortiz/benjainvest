@@ -122,29 +122,7 @@ const ContactSection = () => {
               </Card>
             </div>
 
-            <div className="bg-gradient-subtle rounded-3xl p-6 md:p-8">
-              <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">
-                Qué Esperar
-              </h3>
-              <div className="space-y-3">
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-muted-foreground">Análisis de mercado personalizado y recomendaciones</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-muted-foreground">Portafolio de propiedades adaptado a tus objetivos</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-muted-foreground">Soporte integral y guía completa</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-muted-foreground">Asociación continua para futuras oportunidades</span>
-                </div>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>
