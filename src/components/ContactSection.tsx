@@ -15,22 +15,22 @@ const ContactSection = () => {
       
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="text-center space-y-4 mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">Hablemos</h2>
+        <div className="text-center space-y-4 mb-8 md:mb-16">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-foreground">Hablemos</h2>
           
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+        <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12">
           {/* Contact Form */}
           <Card className="shadow-elegant border-border">
-            <CardHeader>
-              <CardTitle className="text-2xl text-foreground flex items-center gap-3">
-                <MessageSquare className="h-6 w-6 text-primary" />
+            <CardHeader className="p-4 md:p-6">
+              <CardTitle className="text-lg md:text-2xl text-foreground flex items-center gap-2 md:gap-3">
+                <MessageSquare className="h-5 w-5 md:h-6 md:w-6 text-primary" />
                 Envíame un Mensaje
               </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-4">
+            <CardContent className="space-y-4 md:space-y-6 p-4 md:p-6">
+              <div className="grid sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="firstName">Nombre</Label>
                   <Input id="firstName" placeholder="Tu nombre" />
@@ -90,24 +90,24 @@ const ContactSection = () => {
               </CardContent>
             </Card>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <Card className="shadow-soft border-border hover:shadow-elegant transition-all duration-300">
-                <CardContent className="p-5 md:p-6 text-center">
+                <CardContent className="p-4 md:p-6 text-center">
                   <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <Mail className="h-6 w-6 text-primary" />
                   </div>
                   <h4 className="font-semibold text-foreground mb-2">Email</h4>
-                  <p className="text-sm text-muted-foreground mb-4">
+                  <p className="text-sm text-muted-foreground mb-4 break-all">
                     benjamin@seedrealestate.pt
                   </p>
-                  <Button variant="ghost" size="sm" className="w-full sm:w-auto" asChild>
+                  <Button variant="ghost" size="sm" className="w-full" asChild>
                     <a href="mailto:benjamin@seedrealestate.pt">Contactar</a>
                   </Button>
                 </CardContent>
               </Card>
 
               <Card className="shadow-soft border-border hover:shadow-elegant transition-all duration-300">
-                <CardContent className="p-5 md:p-6 text-center">
+                <CardContent className="p-4 md:p-6 text-center">
                   <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <Phone className="h-6 w-6 text-primary" />
                   </div>
@@ -115,7 +115,7 @@ const ContactSection = () => {
                   <p className="text-sm text-muted-foreground mb-4">
                     +351 937 958 969
                   </p>
-                  <Button variant="ghost" size="sm" className="w-full sm:w-auto" asChild>
+                  <Button variant="ghost" size="sm" className="w-full" asChild>
                     <a href="tel:+351937958969">Llamar Ahora</a>
                   </Button>
                 </CardContent>
