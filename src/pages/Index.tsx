@@ -5,6 +5,7 @@ import ExpertiseSection from "@/components/ExpertiseSection";
 import SeedRealEstateSection from "@/components/SeedRealEstateSection";
 import ContactSection from "@/components/ContactSection";
 import StickyContactButton from "@/components/StickyContactButton";
+import { AIChatWidget } from "@/components/AIChatWidget";
 const Index = () => {
   return <div className="min-h-screen">
       <Navigation />
@@ -63,6 +64,7 @@ const Index = () => {
         </div>
       </footer>
       <StickyContactButton />
+      <AIChatWidget />
     </div>;
 };
 export default Index;

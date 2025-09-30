@@ -1,27 +1,106 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Calendar, Mail, Phone, MessageSquare, ArrowRight } from "lucide-react";
+import { Calendar, Mail, Phone, MessageSquare, ArrowRight, Loader2 } from "lucide-react";
 import apartmentInterior from "@/assets/lisbon-apartment-interior.jpg";
 import { openGoogleCalendarBooking } from "@/utils/googleCalendar";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
+import { z } from "zod";
+
+const contactFormSchema = z.object({
+  firstName: z.string().trim().min(1, "First name is required").max(50, "First name too long"),
+  lastName: z.string().trim().min(1, "Last name is required").max(50, "Last name too long"),
+  email: z.string().trim().email("Invalid email address").max(255, "Email too long"),
+  phone: z.string().trim().max(20, "Phone number too long"),
+  investmentGoal: z.string().trim().min(1, "Investment goal is required").max(200, "Investment goal too long"),
+  message: z.string().trim().min(1, "Message is required").max(2000, "Message too long"),
+});
+
+type ContactFormData = z.infer<typeof contactFormSchema>;
+
 const ContactSection = () => {
+  const [formData, setFormData] = useState<ContactFormData>({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    investmentGoal: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { id, value } = e.target;
+    setFormData((prev) => ({ ...prev, [id]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    try {
+      contactFormSchema.parse(formData);
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        toast({
+          title: "Error de Validación",
+          description: error.errors[0].message,
+          variant: "destructive",
+        });
+        return;
+      }
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const { error } = await supabase.functions.invoke("send-contact-email", {
+        body: formData,
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "¡Mensaje Enviado!",
+        description: "Gracias por tu interés. Te responderemos en 24 horas.",
+      });
+
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        investmentGoal: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Error sending message:", error);
+      toast({
+        title: "Error",
+        description: "No se pudo enviar el mensaje. Inténtalo de nuevo o contáctanos directamente.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return <section className="py-12 md:py-20 bg-background relative overflow-hidden">
-      {/* Background image with overlay */}
       <div className="absolute inset-0 bg-cover bg-center opacity-5" style={{
       backgroundImage: `url(${apartmentInterior})`
     }}></div>
       
-      
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center space-y-4 mb-8 md:mb-16">
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-foreground">Hablemos</h2>
-          
         </div>
 
         <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12">
-          {/* Contact Form */}
           <Card className="shadow-elegant border-border">
             <CardHeader className="p-4 md:p-6">
               <CardTitle className="text-lg md:text-2xl text-foreground flex items-center gap-2 md:gap-3">
@@ -30,45 +109,105 @@ const ContactSection = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4 md:space-y-6 p-4 md:p-6">
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label htmlFor="firstName">Nombre</Label>
-                  <Input id="firstName" placeholder="Tu nombre" />
+              <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="firstName">Nombre</Label>
+                    <Input 
+                      id="firstName" 
+                      placeholder="Tu nombre"
+                      value={formData.firstName}
+                      onChange={handleInputChange}
+                      disabled={isSubmitting}
+                      required
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="lastName">Apellido</Label>
+                    <Input 
+                      id="lastName" 
+                      placeholder="Tu apellido"
+                      value={formData.lastName}
+                      onChange={handleInputChange}
+                      disabled={isSubmitting}
+                      required
+                    />
+                  </div>
                 </div>
+                
                 <div className="space-y-2">
-                  <Label htmlFor="lastName">Apellido</Label>
-                  <Input id="lastName" placeholder="Tu apellido" />
+                  <Label htmlFor="email">Email</Label>
+                  <Input 
+                    id="email" 
+                    type="email" 
+                    placeholder="tu.email@ejemplo.com"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    disabled={isSubmitting}
+                    required
+                  />
                 </div>
-              </div>
-              
-              <div className="space-y-2">
-                <Label htmlFor="email">Email</Label>
-                <Input id="email" type="email" placeholder="tu.email@ejemplo.com" />
-              </div>
-              
-              <div className="space-y-2">
-                <Label htmlFor="phone">Teléfono (Opcional)</Label>
-                <Input id="phone" type="tel" placeholder="+56 9 1234 5678" />
-              </div>
-              
-              <div className="space-y-2">
-                <Label htmlFor="investmentGoal">Objetivo de Inversión</Label>
-                <Input id="investmentGoal" placeholder="ej. Residencia principal, Propiedad de inversión, Golden Visa" />
-              </div>
-              
-              <div className="space-y-2">
-                <Label htmlFor="message">Mensaje</Label>
-                <Textarea id="message" placeholder="Cuéntame sobre tus objetivos de inversión, plazos y preguntas específicas..." rows={4} />
-              </div>
-              
-              <Button variant="premium" size="lg" className="w-full group">
-                Enviar Mensaje
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </Button>
+                
+                <div className="space-y-2">
+                  <Label htmlFor="phone">Teléfono (Opcional)</Label>
+                  <Input 
+                    id="phone" 
+                    type="tel" 
+                    placeholder="+56 9 1234 5678"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    disabled={isSubmitting}
+                  />
+                </div>
+                
+                <div className="space-y-2">
+                  <Label htmlFor="investmentGoal">Objetivo de Inversión</Label>
+                  <Input 
+                    id="investmentGoal" 
+                    placeholder="ej. Residencia principal, Propiedad de inversión, Golden Visa"
+                    value={formData.investmentGoal}
+                    onChange={handleInputChange}
+                    disabled={isSubmitting}
+                    required
+                  />
+                </div>
+                
+                <div className="space-y-2">
+                  <Label htmlFor="message">Mensaje</Label>
+                  <Textarea 
+                    id="message" 
+                    placeholder="Cuéntame sobre tus objetivos de inversión, plazos y preguntas específicas..." 
+                    rows={4}
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    disabled={isSubmitting}
+                    required
+                  />
+                </div>
+                
+                <Button 
+                  type="submit" 
+                  variant="premium" 
+                  size="lg" 
+                  className="w-full group"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                      Enviando...
+                    </>
+                  ) : (
+                    <>
+                      Enviar Mensaje
+                      <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                    </>
+                  )}
+                </Button>
+              </form>
             </CardContent>
           </Card>
 
-          {/* Quick Contact Options */}
           <div className="space-y-6 md:space-y-8">
             <Card className="shadow-soft border-border hover:shadow-elegant transition-all duration-300">
               <CardContent className="p-6 md:p-8">
@@ -121,11 +260,10 @@ const ContactSection = () => {
                 </CardContent>
               </Card>
             </div>
-
-            
           </div>
         </div>
       </div>
     </section>;
 };
+
 export default ContactSection;
