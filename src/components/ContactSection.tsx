@@ -23,6 +23,8 @@ const contactFormSchema = z.object({
 type ContactFormData = z.infer<typeof contactFormSchema>;
 
 const ContactSection = () => {
+  console.log("🔍 ContactSection component rendered");
+  
   const [formData, setFormData] = useState<ContactFormData>({
     firstName: "",
     lastName: "",
@@ -33,6 +35,39 @@ const ContactSection = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  // Test function to verify edge function is deployed
+  const testEdgeFunction = async () => {
+    console.log("🧪 Testing edge function directly...");
+    try {
+      const testData = {
+        firstName: "Test",
+        lastName: "User",
+        email: "test@example.com",
+        phone: "+1234567890",
+        investmentGoal: "Test Goal",
+        message: "This is a test message"
+      };
+      
+      console.log("📤 Sending test data:", testData);
+      const { data, error } = await supabase.functions.invoke("send-contact-email", {
+        body: testData,
+      });
+      
+      console.log("📥 Test response:", { data, error });
+      
+      if (error) {
+        console.error("❌ Test failed:", error);
+        alert(`Test failed: ${error.message}`);
+      } else {
+        console.log("✅ Test successful!");
+        alert("Test successful! Check console for details.");
+      }
+    } catch (err: any) {
+      console.error("❌ Test exception:", err);
+      alert(`Test exception: ${err.message}`);
+    }
+  };
+
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -41,12 +76,20 @@ const ContactSection = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
+    console.log("🚀 handleSubmit called!");
+    console.log("📋 Event:", e);
     e.preventDefault();
     
+    console.log("📝 Current form data:", formData);
+    console.log("🔍 Validating form data...");
+    
     try {
-      contactFormSchema.parse(formData);
+      const validatedData = contactFormSchema.parse(formData);
+      console.log("✅ Validation passed:", validatedData);
     } catch (error) {
+      console.error("❌ Validation failed:", error);
       if (error instanceof z.ZodError) {
+        console.error("Validation errors:", error.errors);
         toast({
           title: "Error de Validación",
           description: error.errors[0].message,
@@ -210,6 +253,10 @@ const ContactSection = () => {
                   size="lg" 
                   className="w-full group"
                   disabled={isSubmitting}
+                  onClick={(e) => {
+                    console.log("🖱️ Button clicked!");
+                    console.log("Button event:", e);
+                  }}
                 >
                   {isSubmitting ? (
                     <>
@@ -222,6 +269,17 @@ const ContactSection = () => {
                       <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
                     </>
                   )}
+                </Button>
+                
+                {/* Test button for direct edge function testing */}
+                <Button 
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  className="w-full mt-4"
+                  onClick={testEdgeFunction}
+                >
+                  🧪 Test Edge Function
                 </Button>
               </form>
             </CardContent>
