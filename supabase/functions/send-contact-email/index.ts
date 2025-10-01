@@ -18,15 +18,30 @@ interface ContactFormData {
 }
 
 const handler = async (req: Request): Promise<Response> => {
+  console.log("=== Contact Email Function Called ===");
+  console.log("Request method:", req.method);
+  
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
 
   try {
+    console.log("Parsing request body...");
     const formData: ContactFormData = await req.json();
+    console.log("Form data received:", { ...formData, email: "***", phone: "***" });
+    
     const { firstName, lastName, email, phone, investmentGoal, message } = formData;
+    
+    // Validate Resend API key
+    const resendKey = Deno.env.get("RESEND_API_KEY");
+    if (!resendKey) {
+      console.error("RESEND_API_KEY is not configured");
+      throw new Error("Email service not configured");
+    }
+    console.log("Resend API key found, length:", resendKey.length);
 
     // Email to the business owners
+    console.log("Sending business notification email...");
     const businessEmail = await resend.emails.send({
       from: "Seed Real Estate <onboarding@resend.dev>",
       to: ["benjamin@seedrealestate.pt", "jaortiz.cancino@gmail.com"],
@@ -72,8 +87,15 @@ const handler = async (req: Request): Promise<Response> => {
         </div>
       `,
     });
+    
+    if (businessEmail.error) {
+      console.error("Business email error:", businessEmail.error);
+      throw new Error(`Failed to send business email: ${businessEmail.error.message}`);
+    }
+    console.log("Business email sent successfully:", businessEmail.data?.id);
 
     // Confirmation email to the client
+    console.log("Sending client confirmation email...");
     const clientEmail = await resend.emails.send({
       from: "Benjamin Valdivia - Seed Real Estate <onboarding@resend.dev>",
       to: [email],
@@ -121,8 +143,14 @@ const handler = async (req: Request): Promise<Response> => {
         </div>
       `,
     });
+    
+    if (clientEmail.error) {
+      console.error("Client email error:", clientEmail.error);
+      throw new Error(`Failed to send client email: ${clientEmail.error.message}`);
+    }
+    console.log("Client email sent successfully:", clientEmail.data?.id);
 
-    console.log("Emails sent successfully:", { businessEmail, clientEmail });
+    console.log("=== All emails sent successfully ===");
 
     return new Response(
       JSON.stringify({ 

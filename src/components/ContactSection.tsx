@@ -57,14 +57,23 @@ const ContactSection = () => {
     }
 
     setIsSubmitting(true);
+    console.log("=== Submitting contact form ===");
+    console.log("Form data:", { ...formData, email: "***", phone: "***" });
 
     try {
-      const { error } = await supabase.functions.invoke("send-contact-email", {
+      console.log("Invoking send-contact-email function...");
+      const { data, error } = await supabase.functions.invoke("send-contact-email", {
         body: formData,
       });
 
-      if (error) throw error;
+      console.log("Function response:", { data, error });
 
+      if (error) {
+        console.error("Function returned error:", error);
+        throw error;
+      }
+
+      console.log("Email sent successfully!");
       toast({
         title: "¡Mensaje Enviado!",
         description: "Gracias por tu interés. Te responderemos en 24 horas.",
@@ -78,11 +87,21 @@ const ContactSection = () => {
         investmentGoal: "",
         message: "",
       });
-    } catch (error) {
-      console.error("Error sending message:", error);
+    } catch (error: any) {
+      console.error("=== Error sending message ===");
+      console.error("Error details:", error);
+      console.error("Error message:", error?.message);
+      console.error("Error status:", error?.status);
+      
+      let errorMessage = "No se pudo enviar el mensaje. Inténtalo de nuevo o contáctanos directamente.";
+      
+      if (error?.message) {
+        errorMessage = `Error: ${error.message}`;
+      }
+      
       toast({
         title: "Error",
-        description: "No se pudo enviar el mensaje. Inténtalo de nuevo o contáctanos directamente.",
+        description: errorMessage,
         variant: "destructive",
       });
     } finally {
