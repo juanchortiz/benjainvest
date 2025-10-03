@@ -37,7 +37,10 @@ const ContactSection = () => {
 
   // Test function to verify edge function is deployed
   const testEdgeFunction = async () => {
-    console.log("🧪 Testing edge function directly...");
+    console.log("🧪 ========== EDGE FUNCTION TEST START ==========");
+    console.log("📋 Supabase URL:", import.meta.env.VITE_SUPABASE_URL);
+    console.log("📋 Expected function URL:", `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`);
+    
     try {
       const testData = {
         firstName: "Test",
@@ -49,23 +52,43 @@ const ContactSection = () => {
       };
       
       console.log("📤 Sending test data:", testData);
+      console.log("⏱️ Invoking at:", new Date().toISOString());
+      
       const { data, error } = await supabase.functions.invoke("send-contact-email", {
         body: testData,
       });
       
-      console.log("📥 Test response:", { data, error });
+      console.log("📥 Raw response:", { data, error });
+      console.log("⏱️ Response received at:", new Date().toISOString());
       
       if (error) {
-        console.error("❌ Test failed:", error);
-        alert(`Test failed: ${error.message}`);
+        console.error("❌ Test failed with error object:", JSON.stringify(error, null, 2));
+        toast({
+          title: "Test Failed",
+          description: `Error: ${error.message || "Unknown error"}`,
+          variant: "destructive",
+        });
       } else {
-        console.log("✅ Test successful!");
-        alert("Test successful! Check console for details.");
+        console.log("✅ Test successful! Response data:", data);
+        toast({
+          title: "Test Successful!",
+          description: "Edge function is working. Check console for details.",
+        });
       }
     } catch (err: any) {
-      console.error("❌ Test exception:", err);
-      alert(`Test exception: ${err.message}`);
+      console.error("❌ Test exception caught:", err);
+      console.error("Exception details:", {
+        message: err?.message,
+        stack: err?.stack,
+        name: err?.name,
+      });
+      toast({
+        title: "Test Exception",
+        description: `Exception: ${err.message || "Unknown exception"}`,
+        variant: "destructive",
+      });
     }
+    console.log("🧪 ========== EDGE FUNCTION TEST END ==========");
   };
 
   const handleInputChange = (
@@ -100,23 +123,37 @@ const ContactSection = () => {
     }
 
     setIsSubmitting(true);
-    console.log("=== Submitting contact form ===");
-    console.log("Form data:", { ...formData, email: "***", phone: "***" });
+    console.log("========== FORM SUBMISSION START ==========");
+    console.log("📋 Supabase config:");
+    console.log("   - URL:", import.meta.env.VITE_SUPABASE_URL);
+    console.log("   - Function endpoint:", `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`);
+    console.log("📝 Sanitized form data:", { 
+      ...formData, 
+      email: formData.email.substring(0, 3) + "***",
+      phone: formData.phone ? formData.phone.substring(0, 3) + "***" : "(empty)"
+    });
 
     try {
-      console.log("Invoking send-contact-email function...");
+      console.log("📤 Invoking send-contact-email function...");
+      console.log("⏱️ Timestamp:", new Date().toISOString());
+      
       const { data, error } = await supabase.functions.invoke("send-contact-email", {
         body: formData,
       });
 
-      console.log("Function response:", { data, error });
+      console.log("📥 Raw function response:", JSON.stringify({ data, error }, null, 2));
 
       if (error) {
-        console.error("Function returned error:", error);
+        console.error("❌ Function returned error object:");
+        console.error("   - Message:", error.message);
+        console.error("   - Context:", error.context);
+        console.error("   - Full error:", JSON.stringify(error, null, 2));
         throw error;
       }
 
-      console.log("Email sent successfully!");
+      console.log("✅ Email sent successfully!");
+      console.log("📧 Response data:", data);
+      
       toast({
         title: "¡Mensaje Enviado!",
         description: "Gracias por tu interés. Te responderemos en 24 horas.",
@@ -131,24 +168,42 @@ const ContactSection = () => {
         message: "",
       });
     } catch (error: any) {
-      console.error("=== Error sending message ===");
-      console.error("Error details:", error);
-      console.error("Error message:", error?.message);
-      console.error("Error status:", error?.status);
+      console.error("========== ERROR SENDING MESSAGE ==========");
+      console.error("❌ Error type:", error?.constructor?.name);
+      console.error("❌ Error message:", error?.message);
+      console.error("❌ Error status:", error?.status);
+      console.error("❌ Error context:", error?.context);
+      console.error("❌ Full error object:", JSON.stringify(error, null, 2));
+      console.error("❌ Error stack:", error?.stack);
       
       let errorMessage = "No se pudo enviar el mensaje. Inténtalo de nuevo o contáctanos directamente.";
+      let errorDetails = "";
       
       if (error?.message) {
-        errorMessage = `Error: ${error.message}`;
+        errorDetails = error.message;
+        if (error?.message.includes("404")) {
+          errorMessage = "Edge function not found. Please contact support.";
+          errorDetails = "The send-contact-email function may not be deployed.";
+        } else if (error?.message.includes("Failed to fetch")) {
+          errorMessage = "Network error. Check your internet connection.";
+        } else if (error?.message.includes("CORS")) {
+          errorMessage = "CORS configuration error. Please contact support.";
+        } else {
+          errorMessage = `Error: ${error.message}`;
+        }
       }
+      
+      console.error("👤 User will see:", errorMessage);
+      console.error("📋 Technical details:", errorDetails);
       
       toast({
         title: "Error",
-        description: errorMessage,
+        description: errorMessage + (errorDetails ? ` (${errorDetails})` : ""),
         variant: "destructive",
       });
     } finally {
       setIsSubmitting(false);
+      console.log("========== FORM SUBMISSION END ==========");
     }
   };
 
