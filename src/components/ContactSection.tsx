@@ -320,7 +320,7 @@ const ContactSection = () => {
                     </>
                   ) : (
                     <>
-                      Enviar Mensaje
+                      Contactactar
                       <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
                     </>
                   )}
@@ -372,7 +372,7 @@ const ContactSection = () => {
                     benjamin@seedrealestate.pt
                   </p>
                   <Button variant="ghost" size="sm" className="w-full" asChild>
-                    <a href="mailto:benjamin@seedrealestate.pt">Contactar</a>
+                    <a href="mailto:benjamin@seedrealestate.pt">Contactactar</a>
                   </Button>
                 </CardContent>
               </Card>
