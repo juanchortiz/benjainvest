@@ -106,9 +106,7 @@ const ServicesRoadmap = () => {
                     <Card className={`group hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 border-border bg-card/50 backdrop-blur-sm ${isEven ? 'mt-0' : 'mt-32'}`}>
                       <CardContent className="p-6">
                         <div className="text-center space-y-4">
-                          <div className="w-16 h-16 bg-gradient-premium rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
-                            <IconComponent className="h-8 w-8 text-primary-foreground" />
-                          </div>
+                          {/* Hidden icon on desktop, show only number */}
                           
                           <div>
                             <h3 className="text-lg font-semibold text-foreground mb-2">

@@ -23,11 +23,8 @@ const Navigation = () => {
     label: t('nav.testimonials'),
     href: "#testimonials"
   }, {
-    label: t('nav.imtSimulator'),
+    label: t('nav.simulators'),
     href: "#imt"
-  }, {
-    label: t('nav.mortgageSimulator'),
-    href: "#mortgage"
   }, {
     label: t('nav.contact'),
     href: "#contact"
