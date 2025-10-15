@@ -4,6 +4,7 @@ import { Menu, X, Calendar } from "lucide-react";
 import { openGoogleCalendarBooking } from "@/utils/googleCalendar";
 import { useTranslation } from "react-i18next";
 import LanguageToggle from "./LanguageToggle";
+import BVIcon from "./BVIcon";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,12 +30,16 @@ const Navigation = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#home" className="flex items-center">
-            <img 
-              src="/benjainvest-logo.svg" 
-              alt="Benjainvest" 
-              className="h-12 w-auto"
-            />
+          <a href="#home" className="flex items-center space-x-3">
+            <BVIcon size={40} />
+            <div className="flex flex-col">
+              <span className="font-recoleta text-lg font-semibold text-foreground">
+                Benjamin Valdivia
+              </span>
+              <span className="text-xs text-muted-foreground">
+                Strategic Real Estate Agent
+              </span>
+            </div>
           </a>
 
           {/* Desktop Navigation */}

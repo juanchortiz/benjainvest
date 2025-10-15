@@ -7,6 +7,7 @@ import IMTSimulator from "@/components/IMTSimulator";
 import MortgageSimulator from "@/components/MortgageSimulator";
 import ContactSection from "@/components/ContactSection";
 import StickyContactButton from "@/components/StickyContactButton";
+import BVIcon from "@/components/BVIcon";
 import { AIChatWidget } from "@/components/AIChatWidget";
 const Index = () => {
   return <div className="min-h-screen">
@@ -40,12 +41,16 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-8 text-center md:text-left">
             <div>
-              <div className="flex items-center justify-center md:justify-start mb-4">
-                <img 
-                  src="/benjainvest-logo.svg" 
-                  alt="Benjainvest" 
-                  className="h-16 w-auto"
-                />
+              <div className="flex items-center justify-center md:justify-start mb-4 space-x-3">
+                <BVIcon size={48} />
+                <div className="flex flex-col">
+                  <span className="font-recoleta text-xl font-semibold text-foreground">
+                    Benjamin Valdivia
+                  </span>
+                  <span className="text-sm text-muted-foreground">
+                    Strategic Real Estate Agent
+                  </span>
+                </div>
               </div>
               <p className="text-muted-foreground text-sm">
                 Tu socio estratégico para inversión inmobiliaria en Portugal.
