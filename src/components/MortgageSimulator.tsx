@@ -66,7 +66,7 @@ const MortgageSimulator: React.FC = () => {
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <Tabs defaultValue="calculator" className="w-full">
             <TabsList className="grid w-full grid-cols-2 mb-8 bg-muted/50 p-2 rounded-2xl">
               <TabsTrigger 

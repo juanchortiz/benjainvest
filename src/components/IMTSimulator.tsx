@@ -71,18 +71,18 @@ const IMTSimulator = () => {
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <Tabs defaultValue="calculator" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 mb-8 bg-muted/50 p-2 rounded-2xl">
+            <TabsList className="grid w-full grid-cols-2 mb-8 bg-white/95 p-2 rounded-2xl shadow-lg">
               <TabsTrigger 
                 value="calculator" 
-                className="text-xl py-4 rounded-xl font-recoleta data-[state=active]:bg-gradient-premium data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg transition-all duration-300"
+                className="text-xl py-4 rounded-xl font-recoleta text-foreground/70 data-[state=active]:bg-[hsl(23,35%,60%)] data-[state=active]:text-white data-[state=active]:shadow-md transition-all duration-300 hover:text-foreground"
               >
                 {t('imt.calculator')}
               </TabsTrigger>
               <TabsTrigger 
                 value="results" 
-                className="text-xl py-4 rounded-xl font-recoleta data-[state=active]:bg-gradient-premium data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg transition-all duration-300"
+                className="text-xl py-4 rounded-xl font-recoleta text-foreground/70 data-[state=active]:bg-[hsl(23,35%,60%)] data-[state=active]:text-white data-[state=active]:shadow-md transition-all duration-300 hover:text-foreground"
               >
                 {t('imt.results')}
               </TabsTrigger>
@@ -107,7 +107,7 @@ const IMTSimulator = () => {
         </div>
 
         {/* Information Section */}
-        <div className="mt-12 max-w-4xl mx-auto">
+        <div className="mt-12 max-w-5xl mx-auto">
           <Card className="bg-card border-border shadow-soft">
             <CardContent className="p-6">
               <h3 className="text-lg font-semibold text-foreground mb-4 text-center">
