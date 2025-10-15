@@ -24,7 +24,7 @@ module.exports = async (req, res) => {
     const { firstName, lastName, email, phone, investmentGoal, message } = req.body;
 
     await resend.emails.send({
-      from: 'onboarding@resend.dev',
+      from: 'contacto@benjainvest.pt',
       to: ['jaortiz.cancino@gmail.com'],
       subject: `New Contact Form Submission from ${firstName} ${lastName}`,
       html: `
