@@ -2,6 +2,7 @@
   "nav": {
     "whyPortugal": "Why Portugal",
     "myExpertise": "My Expertise",
+    "roadmap": "Process",
     "testimonials": "Success Stories",
     "imtSimulator": "IMT Simulator",
     "mortgageSimulator": "Mortgage Simulator",
@@ -247,6 +248,52 @@
     "mariaQuote": "Benjamin helped me find the perfect apartment in Chiado. His knowledge of the Portuguese market and attention to detail made the entire process smooth. In 6 months I had already recovered my initial investment.",
     "carlosQuote": "As an experienced investor, I value the deep analysis Benjamin does of each opportunity. His network of contacts and banking knowledge allowed me to access favorable financing. Excellent professional.",
     "anaQuote": "I came from Brazil looking for stability and growth. Benjamin not only helped me find an incredible property in Príncipe Real, but guided me through the entire legal and tax process. Highly recommended."
+  },
+  "roadmap": {
+    "title": "Real Estate Process Roadmap",
+    "subtitle": "Our comprehensive step-by-step guidance for your investment in Portugal",
+    "cta": "Ready to start your real estate investment process?",
+    "ctaButton": "Start My Process",
+    "step1": {
+      "title": "Initial Consultation",
+      "description": "Complete analysis of your investor profile and definition of investment objectives.",
+      "details": "Client profile, financing options, Portuguese legal process, taxes and market study"
+    },
+    "step2": {
+      "title": "Financing & Procedures",
+      "description": "NIF obtention, bank account opening and search for favorable mortgages.",
+      "details": "NIF, bank account, financial simulations, initial legal advice and documentation"
+    },
+    "step3": {
+      "title": "Property Search",
+      "description": "Property identification according to specific criteria and access to exclusive listings.",
+      "details": "Custom criteria, exclusive access, profitability analysis and strategic location"
+    },
+    "step4": {
+      "title": "Visits & Evaluation",
+      "description": "Organization of in-person or virtual visits with complete technical analysis.",
+      "details": "In-person/virtual visits, technical review, cost calculation and potential return"
+    },
+    "step5": {
+      "title": "Due Diligence & Negotiation",
+      "description": "Legal coordination, complete document review and condition negotiation.",
+      "details": "Lawyer coordination, caderneta review, registry, licenses and energy certificate"
+    },
+    "step6": {
+      "title": "Promise & Deed",
+      "description": "CPCV drafting and signing, notarial coordination and tax payments.",
+      "details": "CPCV, deposit, notary coordination, IMT, stamp duty and final registration"
+    },
+    "step7": {
+      "title": "Post-Purchase & Management",
+      "description": "Assistance with renovations, insurance, furniture and property administration.",
+      "details": "Renovations, insurance, furniture, administration, AL licenses and maintenance"
+    },
+    "step8": {
+      "title": "Investment & Appreciation",
+      "description": "Profitability evaluation, tenant management and appreciation strategies.",
+      "details": "Profitability evaluation, platform promotion, tenant management and renovations"
+    }
   }
 }
 

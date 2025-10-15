@@ -2,6 +2,7 @@
   "nav": {
     "whyPortugal": "Por qué Portugal",
     "myExpertise": "Mi Experiencia",
+    "roadmap": "Proceso",
     "testimonials": "Casos de Éxito",
     "imtSimulator": "Simulador IMT",
     "mortgageSimulator": "Simulador Hipoteca",
@@ -247,6 +248,52 @@
     "mariaQuote": "Benjamín me ayudó a encontrar el apartamento perfecto en Chiado. Su conocimiento del mercado portugués y su atención al detalle hicieron que todo el proceso fuera fluido. En 6 meses ya había recuperado mi inversión inicial.",
     "carlosQuote": "Como inversor experimentado, valoro el análisis profundo que Benjamín hace de cada oportunidad. Su red de contactos y conocimiento bancario me permitieron acceder a financiamiento favorable. Excelente profesional.",
     "anaQuote": "Vine desde Brasil buscando estabilidad y crecimiento. Benjamín no solo me ayudó a encontrar una propiedad increíble en Príncipe Real, sino que me guió en todo el proceso legal y fiscal. Altamente recomendado."
+  },
+  "roadmap": {
+    "title": "Roadmap del Proceso Inmobiliario",
+    "subtitle": "Nuestro acompañamiento integral paso a paso para tu inversión en Portugal",
+    "cta": "¿Listo para comenzar tu proceso de inversión inmobiliaria?",
+    "ctaButton": "Iniciar Mi Proceso",
+    "step1": {
+      "title": "Asesoría Inicial",
+      "description": "Análisis completo de tu perfil como inversor y definición de objetivos de inversión.",
+      "details": "Perfil de cliente, opciones de financiación, proceso legal portugués, impuestos y estudio de mercado"
+    },
+    "step2": {
+      "title": "Financiación y Trámites",
+      "description": "Obtención de NIF, apertura de cuenta bancaria y búsqueda de hipotecas favorables.",
+      "details": "NIF, cuenta bancaria, simulaciones financieras, asesoría legal inicial y documentación"
+    },
+    "step3": {
+      "title": "Búsqueda de Propiedades",
+      "description": "Identificación de inmuebles según criterios específicos y acceso a listados exclusivos.",
+      "details": "Criterios personalizados, acceso exclusivo, análisis de rentabilidad y ubicación estratégica"
+    },
+    "step4": {
+      "title": "Visitas y Evaluación",
+      "description": "Organización de visitas presenciales o virtuales con análisis técnico completo.",
+      "details": "Visitas presenciales/virtuales, revisión técnica, cálculo de costes y retorno potencial"
+    },
+    "step5": {
+      "title": "Due Diligence y Negociación",
+      "description": "Coordinación legal, revisión documental completa y negociación de condiciones.",
+      "details": "Coordinación con abogado, revisión de caderneta, registo, licencias y certificado energético"
+    },
+    "step6": {
+      "title": "Promesa y Escritura",
+      "description": "Redacción y firma del CPCV, coordinación notarial y pago de impuestos.",
+      "details": "CPCV, depósito de señal, coordinación con notario, IMT, sello y registro final"
+    },
+    "step7": {
+      "title": "Post-Compra y Gestión",
+      "description": "Asistencia en renovaciones, seguros, mobiliario y administración de la propiedad.",
+      "details": "Renovaciones, seguros, mobiliario, administración, licencias AL y mantenimiento"
+    },
+    "step8": {
+      "title": "Inversión y Revalorización",
+      "description": "Evaluación de rentabilidad, gestión de inquilinos y estrategias de valorización.",
+      "details": "Evaluación de rentabilidad, promoción en plataformas, gestión de inquilinos y reformas"
+    }
   }
 }
 

@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import WhyPortugalSection from "@/components/WhyPortugalSection";
 import ExpertiseSection from "@/components/ExpertiseSection";
+import ServicesRoadmap from "@/components/ServicesRoadmap";
 import SeedRealEstateSection from "@/components/SeedRealEstateSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import IMTSimulator from "@/components/IMTSimulator";
@@ -22,6 +23,9 @@ const Index = () => {
         </section>
         <section id="expertise">
           <ExpertiseSection />
+        </section>
+        <section id="roadmap">
+          <ServicesRoadmap />
         </section>
         <section id="seed">
           <SeedRealEstateSection />

@@ -17,6 +17,9 @@ const Navigation = () => {
     label: t('nav.myExpertise'),
     href: "#expertise"
   }, {
+    label: t('nav.roadmap'),
+    href: "#roadmap"
+  }, {
     label: t('nav.testimonials'),
     href: "#testimonials"
   }, {
