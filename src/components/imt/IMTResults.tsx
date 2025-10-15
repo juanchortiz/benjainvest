@@ -15,7 +15,14 @@ const IMTResults = ({ result }: IMTResultsProps) => {
       style: 'currency',
       currency: 'EUR',
       minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
+      maximumFractionDigits: 1,
+    }).format(value);
+  };
+
+  const formatNumber = (value: number) => {
+    return new Intl.NumberFormat('pt-PT', {
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 1,
     }).format(value);
   };
 
@@ -67,7 +74,7 @@ const IMTResults = ({ result }: IMTResultsProps) => {
           {result.detalhes?.taxa !== undefined && (
             <div className="flex justify-between items-center p-3 bg-card rounded-lg border border-border">
               <span className="text-sm text-muted-foreground">{t('imt.rate')}</span>
-              <span className="font-semibold text-foreground">{result.detalhes.taxa}%</span>
+              <span className="font-semibold text-foreground">{formatNumber(result.detalhes.taxa)}%</span>
             </div>
           )}
 

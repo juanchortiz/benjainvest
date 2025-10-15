@@ -14,7 +14,19 @@ const MortgageResults: React.FC<MortgageResultsProps> = ({ result }) => {
   const [showAmortization, setShowAmortization] = useState(false);
 
   const formatCurrency = (value: number) => {
-    return new Intl.NumberFormat('pt-PT', { style: 'currency', currency: 'EUR' }).format(value);
+    return new Intl.NumberFormat('pt-PT', { 
+      style: 'currency', 
+      currency: 'EUR',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 1,
+    }).format(value);
+  };
+
+  const formatNumber = (value: number) => {
+    return new Intl.NumberFormat('pt-PT', {
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 1,
+    }).format(value);
   };
 
   if (result.capitalFinanciado === 0) {
@@ -68,7 +80,7 @@ const MortgageResults: React.FC<MortgageResultsProps> = ({ result }) => {
             </div>
             <div className="text-center p-4 bg-card rounded-lg">
               <p className="text-sm text-muted-foreground mb-1">{t('mortgage.interestRate')}</p>
-              <p className="text-xl font-semibold text-foreground">{result.taxaNominalAnual.toFixed(2)}%</p>
+              <p className="text-xl font-semibold text-foreground">{formatNumber(result.taxaNominalAnual)}%</p>
             </div>
           </div>
         </CardContent>
@@ -90,7 +102,7 @@ const MortgageResults: React.FC<MortgageResultsProps> = ({ result }) => {
           </div>
           <div className="flex justify-between border-t border-border pt-3">
             <span className="font-semibold text-foreground">TAEG:</span>
-            <span className="text-xl font-bold text-primary">{result.TAEG.toFixed(2)}%</span>
+            <span className="text-xl font-bold text-primary">{formatNumber(result.TAEG)}%</span>
           </div>
         </CardContent>
       </Card>
