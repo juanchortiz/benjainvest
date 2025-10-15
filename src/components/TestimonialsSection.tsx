@@ -54,48 +54,50 @@ const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 border-border bg-card/50 backdrop-blur-sm">
               <CardContent className="p-8">
-                {/* Quote Icon */}
+                {/* 1. Client Photo First */}
                 <div className="flex justify-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-premium rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Quote className="h-8 w-8 text-primary-foreground" />
-                  </div>
-                </div>
-
-                {/* Rating */}
-                <div className="flex justify-center mb-6">
-                  {Array.from({ length: testimonial.rating }).map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-
-                {/* Quote */}
-                <blockquote className="text-muted-foreground leading-relaxed mb-8 text-center italic">
-                  "{testimonial.quote}"
-                </blockquote>
-
-                {/* Client Info */}
-                <div className="flex items-center space-x-4">
                   <div className="relative">
                     <img 
                       src={testimonial.image} 
                       alt={testimonial.name}
-                      className="w-16 h-16 rounded-full object-cover border-4 border-primary/20"
+                      className="w-24 h-24 rounded-full object-cover border-4 border-primary/20 group-hover:border-primary/40 transition-all duration-300"
                     />
-                    <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                    <div className="absolute -bottom-1 -right-1 w-8 h-8 bg-green-500 rounded-full border-3 border-white flex items-center justify-center">
+                      <div className="w-3 h-3 bg-white rounded-full"></div>
                     </div>
                   </div>
-                  <div className="flex-1">
-                    <h4 className="font-semibold text-foreground">{testimonial.name}</h4>
-                    <p className="text-sm text-muted-foreground">{testimonial.location}</p>
-                    <div className="mt-2 space-y-1">
-                      <p className="text-sm font-medium text-primary">
-                        {t('testimonials.investment')}: {testimonial.investment}
-                      </p>
-                      <p className="text-xs text-muted-foreground">
-                        {testimonial.property}
-                      </p>
-                    </div>
+                </div>
+
+                {/* 2. Client Name and Location */}
+                <div className="text-center mb-6">
+                  <h4 className="font-semibold text-foreground text-lg">{testimonial.name}</h4>
+                  <p className="text-sm text-muted-foreground">{testimonial.location}</p>
+                  {/* Rating */}
+                  <div className="flex justify-center mt-2">
+                    {Array.from({ length: testimonial.rating }).map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                </div>
+
+                {/* 3. Quote */}
+                <blockquote className="text-muted-foreground leading-relaxed mb-8 text-center italic relative">
+                  <Quote className="h-6 w-6 text-primary/30 absolute -top-2 -left-2" />
+                  "{testimonial.quote}"
+                </blockquote>
+
+                {/* 4. Investment Details */}
+                <div className="bg-gradient-subtle rounded-2xl p-6 text-center">
+                  <h5 className="font-semibold text-foreground mb-3">
+                    {t('testimonials.whatTheyBought')}
+                  </h5>
+                  <div className="space-y-2">
+                    <p className="text-2xl font-bold text-primary">
+                      {testimonial.investment}
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      {testimonial.property}
+                    </p>
                   </div>
                 </div>
               </CardContent>
