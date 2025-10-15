@@ -2,6 +2,7 @@
   "nav": {
     "whyPortugal": "Why Portugal",
     "myExpertise": "My Expertise",
+    "testimonials": "Success Stories",
     "imtSimulator": "IMT Simulator",
     "mortgageSimulator": "Mortgage Simulator",
     "contact": "Contact",
@@ -235,6 +236,16 @@
     "taegDescription": "APR (Taxa Anual de Encargos Efectiva Global / Annual Percentage Rate) is the annual rate that includes all credit costs: interest, commissions and insurance. It allows comparing offers from different banks.",
     "stateGuarantee": "State Guarantee for Young Buyers",
     "stateGuaranteeDescription": "The State can provide a personal guarantee up to 15% of capital for young people ≤35 years old for their first home purchase, enabling 100% financing."
+  },
+  "testimonials": {
+    "title": "Success Stories",
+    "subtitle": "Real stories from clients who have achieved their investment goals in Portugal with my guidance",
+    "investment": "Investment",
+    "cta": "Ready to be our next success story?",
+    "ctaButton": "Start My Investment",
+    "mariaQuote": "Benjamin helped me find the perfect apartment in Chiado. His knowledge of the Portuguese market and attention to detail made the entire process smooth. In 6 months I had already recovered my initial investment.",
+    "carlosQuote": "As an experienced investor, I value the deep analysis Benjamin does of each opportunity. His network of contacts and banking knowledge allowed me to access favorable financing. Excellent professional.",
+    "anaQuote": "I came from Brazil looking for stability and growth. Benjamin not only helped me find an incredible property in Príncipe Real, but guided me through the entire legal and tax process. Highly recommended."
   }
 }
 

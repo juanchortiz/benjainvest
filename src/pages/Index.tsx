@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import WhyPortugalSection from "@/components/WhyPortugalSection";
 import ExpertiseSection from "@/components/ExpertiseSection";
 import SeedRealEstateSection from "@/components/SeedRealEstateSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import IMTSimulator from "@/components/IMTSimulator";
 import MortgageSimulator from "@/components/MortgageSimulator";
 import ContactSection from "@/components/ContactSection";
@@ -24,6 +25,9 @@ const Index = () => {
         </section>
         <section id="seed">
           <SeedRealEstateSection />
+        </section>
+        <section id="testimonials">
+          <TestimonialsSection />
         </section>
         <section id="imt">
           <IMTSimulator />

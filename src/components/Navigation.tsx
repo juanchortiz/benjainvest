@@ -17,6 +17,9 @@ const Navigation = () => {
     label: t('nav.myExpertise'),
     href: "#expertise"
   }, {
+    label: t('nav.testimonials'),
+    href: "#testimonials"
+  }, {
     label: t('nav.imtSimulator'),
     href: "#imt"
   }, {

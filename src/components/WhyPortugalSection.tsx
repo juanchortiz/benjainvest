@@ -28,8 +28,14 @@ const WhyPortugalSection = () => {
     src: "/lovable-uploads/2de1b045-14e5-40b0-92a5-f3c43e96e035.png",
     alt: "Ciclistas junto al río con el puente de Lisboa al fondo"
   }, {
-    src: "/lovable-uploads/70708b46-c426-4025-afc9-6e6ada93ca11.png",
-    alt: "Arquitectura tradicional portuguesa con edificios coloridos"
+    src: "/lovable-uploads/benjamin-valdivia-latest.jpg",
+    alt: "Vista panorámica de Lisboa al atardecer con arquitectura tradicional"
+  }, {
+    src: "/lovable-uploads/benjamin-valdivia-new.jpg",
+    alt: "Vista aérea de Lisboa con el castillo de São Jorge y el río Tajo"
+  }, {
+    src: "/lovable-uploads/benjamin-valdivia-professional.jpg",
+    alt: "Vista panorámica diurna de Lisboa con iglesia clásica y edificios coloridos"
   }];
   
   React.useEffect(() => {

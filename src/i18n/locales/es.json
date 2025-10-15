@@ -2,6 +2,7 @@
   "nav": {
     "whyPortugal": "Por qué Portugal",
     "myExpertise": "Mi Experiencia",
+    "testimonials": "Casos de Éxito",
     "imtSimulator": "Simulador IMT",
     "mortgageSimulator": "Simulador Hipoteca",
     "contact": "Contacto",
@@ -235,6 +236,16 @@
     "taegDescription": "La TAEG (Taxa Anual de Encargos Efectiva Global) es la tasa anual que incluye todos los costes del crédito: intereses, comisiones y seguros. Permite comparar ofertas de diferentes bancos.",
     "stateGuarantee": "Garantía Estatal Jóvenes",
     "stateGuaranteeDescription": "El Estado puede prestar garantía personal hasta el 15% del capital para jóvenes ≤35 años en la primera adquisición de vivienda propia, permitiendo financiamiento al 100%."
+  },
+  "testimonials": {
+    "title": "Casos de Éxito",
+    "subtitle": "Historias reales de clientes que han logrado sus objetivos de inversión en Portugal con mi asesoramiento",
+    "investment": "Inversión",
+    "cta": "¿Listo para ser nuestro próximo caso de éxito?",
+    "ctaButton": "Comenzar mi Inversión",
+    "mariaQuote": "Benjamín me ayudó a encontrar el apartamento perfecto en Chiado. Su conocimiento del mercado portugués y su atención al detalle hicieron que todo el proceso fuera fluido. En 6 meses ya había recuperado mi inversión inicial.",
+    "carlosQuote": "Como inversor experimentado, valoro el análisis profundo que Benjamín hace de cada oportunidad. Su red de contactos y conocimiento bancario me permitieron acceder a financiamiento favorable. Excelente profesional.",
+    "anaQuote": "Vine desde Brasil buscando estabilidad y crecimiento. Benjamín no solo me ayudó a encontrar una propiedad increíble en Príncipe Real, sino que me guió en todo el proceso legal y fiscal. Altamente recomendado."
   }
 }
 
