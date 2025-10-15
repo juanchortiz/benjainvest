@@ -1,10 +1,10 @@
-import { Resend } from 'resend';
+const { Resend } = require('resend');
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export default async function handler(req, res) {
+module.exports = async (req, res) => {
   // Enable CORS
-  res.setHeader('Access-Control-Allow-Credentials', true);
+  res.setHeader('Access-Control-Allow-Credentials', 'true');
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
   res.setHeader(
@@ -13,19 +13,18 @@ export default async function handler(req, res) {
   );
 
   if (req.method === 'OPTIONS') {
-    res.status(200).end();
-    return;
+    return res.status(200).end();
   }
 
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { firstName, lastName, email, phone, investmentGoal, message } = req.body;
-
   try {
+    const { firstName, lastName, email, phone, investmentGoal, message } = req.body;
+
     await resend.emails.send({
-      from: 'onboarding@resend.dev', // Use Resend's test domain
+      from: 'onboarding@resend.dev',
       to: ['jaortiz.cancino@gmail.com'],
       subject: `New Contact Form Submission from ${firstName} ${lastName}`,
       html: `
@@ -37,9 +36,9 @@ export default async function handler(req, res) {
       `,
     });
 
-    res.status(200).json({ success: true });
+    return res.status(200).json({ success: true });
   } catch (err) {
     console.error('Email send error:', err);
-    res.status(500).json({ error: 'Failed to send email', details: err.message });
+    return res.status(500).json({ error: 'Failed to send email', details: err.message });
   }
-}
+};
