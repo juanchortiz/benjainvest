@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Calculator } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import IMTFormInputs from "./imt/IMTFormInputs";
@@ -70,30 +71,29 @@ const IMTSimulator = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {/* Form Card */}
-          <Card className="shadow-elegant border-border">
-            <CardHeader className="pb-4">
-              <CardTitle className="text-2xl text-foreground text-center">
-                {t('imt.calculator')}
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <IMTFormInputs formData={formData} onChange={handleInputChange} />
-            </CardContent>
-          </Card>
-
-          {/* Results Card */}
-          <Card className="shadow-elegant border-border">
-            <CardHeader className="pb-4">
-              <CardTitle className="text-2xl text-foreground text-center">
-                {t('imt.results')}
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <IMTResults result={result} />
-            </CardContent>
-          </Card>
+        <div className="max-w-6xl mx-auto">
+          <Tabs defaultValue="calculator" className="w-full">
+            <TabsList className="grid w-full grid-cols-2 mb-8">
+              <TabsTrigger value="calculator" className="text-lg py-3">{t('imt.calculator')}</TabsTrigger>
+              <TabsTrigger value="results" className="text-lg py-3">{t('imt.results')}</TabsTrigger>
+            </TabsList>
+            
+            <TabsContent value="calculator">
+              <Card className="shadow-elegant border-border">
+                <CardContent className="p-6">
+                  <IMTFormInputs formData={formData} onChange={handleInputChange} />
+                </CardContent>
+              </Card>
+            </TabsContent>
+            
+            <TabsContent value="results">
+              <Card className="shadow-elegant border-border">
+                <CardContent className="p-6">
+                  <IMTResults result={result} />
+                </CardContent>
+              </Card>
+            </TabsContent>
+          </Tabs>
         </div>
 
         {/* Information Section */}

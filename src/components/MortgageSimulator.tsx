@@ -54,35 +54,41 @@ const MortgageSimulator: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="text-center space-y-4 mb-12">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <Calculator className="h-10 w-10 text-primary" />
-            <h2 className="text-4xl lg:text-5xl font-bold text-foreground">
-              {t('mortgage.title')}
-            </h2>
+            <div className="w-16 h-16 bg-gradient-premium rounded-2xl flex items-center justify-center shadow-elegant">
+              <Calculator className="h-8 w-8 text-primary-foreground" />
+            </div>
           </div>
+          <h2 className="text-4xl lg:text-5xl font-bold text-foreground">
+            {t('mortgage.title')}
+          </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             {t('mortgage.subtitle')}
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <Card className="shadow-elegant border-border">
-            <CardContent className="p-6">
-              <Tabs defaultValue="calculator" className="w-full">
-                <TabsList className="grid w-full grid-cols-2 mb-6">
-                  <TabsTrigger value="calculator">{t('mortgage.calculator')}</TabsTrigger>
-                  <TabsTrigger value="results">{t('mortgage.results')}</TabsTrigger>
-                </TabsList>
-                
-                <TabsContent value="calculator" className="space-y-6">
+        <div className="max-w-6xl mx-auto">
+          <Tabs defaultValue="calculator" className="w-full">
+            <TabsList className="grid w-full grid-cols-2 mb-8">
+              <TabsTrigger value="calculator" className="text-lg py-3">{t('mortgage.calculator')}</TabsTrigger>
+              <TabsTrigger value="results" className="text-lg py-3">{t('mortgage.results')}</TabsTrigger>
+            </TabsList>
+            
+            <TabsContent value="calculator">
+              <Card className="shadow-elegant border-border">
+                <CardContent className="p-6">
                   <MortgageFormInputs input={input} onInputChange={handleInputChange} />
-                </TabsContent>
-                
-                <TabsContent value="results" className="space-y-6">
+                </CardContent>
+              </Card>
+            </TabsContent>
+            
+            <TabsContent value="results">
+              <Card className="shadow-elegant border-border">
+                <CardContent className="p-6">
                   <MortgageResults result={result} />
-                </TabsContent>
-              </Tabs>
-            </CardContent>
-          </Card>
+                </CardContent>
+              </Card>
+            </TabsContent>
+          </Tabs>
         </div>
 
         {/* Información adicional */}
