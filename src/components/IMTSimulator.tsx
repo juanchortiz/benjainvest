@@ -73,16 +73,16 @@ const IMTSimulator = () => {
 
         <div className="max-w-5xl mx-auto">
           <Tabs defaultValue="calculator" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 mb-8 bg-white/95 p-2 rounded-2xl shadow-lg">
+            <TabsList className="grid w-full grid-cols-2 gap-4 mb-8 bg-transparent p-0">
               <TabsTrigger 
                 value="calculator" 
-                className="text-xl py-4 rounded-xl font-recoleta text-foreground/70 data-[state=active]:bg-[hsl(23,35%,60%)] data-[state=active]:text-white data-[state=active]:shadow-md transition-all duration-300 hover:text-foreground"
+                className="text-xl py-4 rounded-xl font-recoleta bg-white text-[hsl(182,100%,9%)] shadow-lg border-2 border-white data-[state=active]:bg-[hsl(23,35%,60%)] data-[state=active]:text-white data-[state=active]:border-[hsl(23,35%,60%)] data-[state=active]:shadow-xl transition-all duration-300 hover:shadow-xl hover:scale-[1.02]"
               >
                 {t('imt.calculator')}
               </TabsTrigger>
               <TabsTrigger 
                 value="results" 
-                className="text-xl py-4 rounded-xl font-recoleta text-foreground/70 data-[state=active]:bg-[hsl(23,35%,60%)] data-[state=active]:text-white data-[state=active]:shadow-md transition-all duration-300 hover:text-foreground"
+                className="text-xl py-4 rounded-xl font-recoleta bg-white text-[hsl(182,100%,9%)] shadow-lg border-2 border-white data-[state=active]:bg-[hsl(23,35%,60%)] data-[state=active]:text-white data-[state=active]:border-[hsl(23,35%,60%)] data-[state=active]:shadow-xl transition-all duration-300 hover:shadow-xl hover:scale-[1.02]"
               >
                 {t('imt.results')}
               </TabsTrigger>
