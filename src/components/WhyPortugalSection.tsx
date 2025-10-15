@@ -28,17 +28,14 @@ const WhyPortugalSection = () => {
     src: "/lovable-uploads/2de1b045-14e5-40b0-92a5-f3c43e96e035.png",
     alt: "Ciclistas junto al río con el puente de Lisboa al fondo"
   }, {
-    src: "/lisbon-sunset-view.jpg",
-    alt: "Vista panorámica de Lisboa al atardecer con arquitectura tradicional y columnas en primer plano"
+    src: "/lisbon1.jpg",
+    alt: "Vista panorámica de Lisboa al atardecer con arquitectura tradicional"
   }, {
-    src: "/lisbon-panoramic-view.jpg",
+    src: "/lisbon2.jpg",
     alt: "Vista aérea de Lisboa con el castillo de São Jorge y el puente 25 de Abril"
   }, {
-    src: "/lisbon-daytime-view.jpg",
+    src: "/lisbon3.jpg",
     alt: "Vista panorámica diurna de Lisboa con iglesia clásica y edificios coloridos"
-  }, {
-    src: "/lisbon-night-view.jpg",
-    alt: "Vista nocturna de Lisboa iluminada con el castillo de São Jorge y el Cristo Rei"
   }];
   
   React.useEffect(() => {
