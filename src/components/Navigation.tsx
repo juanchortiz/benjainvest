@@ -29,13 +29,13 @@ const Navigation = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center gap-3">
-            
-            <div>
-              <div className="font-bold text-foreground text-base">Benjamín Valdivia</div>
-              <div className="text-sm text-muted-foreground">Agente Privado</div>
-            </div>
-          </div>
+          <a href="#home" className="flex items-center">
+            <img 
+              src="/benjainvest-logo.svg" 
+              alt="Benjainvest" 
+              className="h-12 w-auto"
+            />
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">

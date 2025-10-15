@@ -40,14 +40,12 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-8 text-center md:text-left">
             <div>
-              <div className="flex items-center gap-3 justify-center md:justify-start mb-4">
-                <div className="w-10 h-10 bg-gradient-premium rounded-xl flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-lg">BV</span>
-                </div>
-                <div>
-                  <div className="font-bold text-foreground">Benjamín Valdivia</div>
-                  <div className="text-xs text-muted-foreground">Agente Privado</div>
-                </div>
+              <div className="flex items-center justify-center md:justify-start mb-4">
+                <img 
+                  src="/benjainvest-logo.svg" 
+                  alt="Benjainvest" 
+                  className="h-16 w-auto"
+                />
               </div>
               <p className="text-muted-foreground text-sm">
                 Tu socio estratégico para inversión inmobiliaria en Portugal.
