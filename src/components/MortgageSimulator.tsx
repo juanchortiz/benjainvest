@@ -68,9 +68,19 @@ const MortgageSimulator: React.FC = () => {
 
         <div className="max-w-6xl mx-auto">
           <Tabs defaultValue="calculator" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 mb-8">
-              <TabsTrigger value="calculator" className="text-lg py-3">{t('mortgage.calculator')}</TabsTrigger>
-              <TabsTrigger value="results" className="text-lg py-3">{t('mortgage.results')}</TabsTrigger>
+            <TabsList className="grid w-full grid-cols-2 mb-8 bg-muted/50 p-2 rounded-2xl">
+              <TabsTrigger 
+                value="calculator" 
+                className="text-xl py-4 rounded-xl font-recoleta data-[state=active]:bg-gradient-premium data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg transition-all duration-300"
+              >
+                {t('mortgage.calculator')}
+              </TabsTrigger>
+              <TabsTrigger 
+                value="results" 
+                className="text-xl py-4 rounded-xl font-recoleta data-[state=active]:bg-gradient-premium data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg transition-all duration-300"
+              >
+                {t('mortgage.results')}
+              </TabsTrigger>
             </TabsList>
             
             <TabsContent value="calculator">
