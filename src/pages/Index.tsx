@@ -26,6 +26,9 @@ const Index = () => {
         <section id="seed">
           <SeedRealEstateSection />
         </section>
+        <section id="contact">
+          <ContactSection />
+        </section>
         <section id="testimonials">
           <TestimonialsSection />
         </section>
@@ -34,9 +37,6 @@ const Index = () => {
         </section>
         <section id="mortgage">
           <MortgageSimulator />
-        </section>
-        <section id="contact">
-          <ContactSection />
         </section>
       </main>
       
