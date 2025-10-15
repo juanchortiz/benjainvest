@@ -168,7 +168,7 @@ const WhyPortugalSection = () => {
                 <div className="text-2xl font-bold text-primary mb-1">{volumeTraded.displayValue}</div>
                 <div className="text-xs text-muted-foreground">{t('whyPortugal.volumeTraded')}</div>
               </div>
-              <div ref={totalVolume.elementRef} className="text-center p-4 bg-card rounded-2xl shadow-soft">
+              <div ref={totalVolume.elementRef} className="text-center p-4 bg-card rounded-2xl shadow-soft md:col-auto col-span-2 md:col-span-1">
                 <div className="text-2xl font-bold text-primary mb-1">{totalVolume.displayValue}</div>
                 <div className="text-xs text-muted-foreground">{t('whyPortugal.totalVolume')}</div>
               </div>

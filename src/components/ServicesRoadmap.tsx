@@ -109,32 +109,20 @@ const ServicesRoadmap = () => {
               {roadmapSteps.map((step, index) => {
                 const IconComponent = step.icon;
                 const isEven = index % 2 === 0;
-                const shouldShowNumberAbove = [0, 2, 4, 6].includes(index); // Steps 1, 3, 5, 7 (0-indexed)
                 
                 return (
                   <div key={index} className="relative">
-                    {/* Timeline Node - Only for steps 2, 4, 6, 8 */}
-                    {!shouldShowNumberAbove && (
-                      <div className="absolute top-16 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-                        <div className="w-16 h-16 bg-gradient-premium rounded-full flex items-center justify-center shadow-lg">
-                          <span className="text-2xl font-bold text-primary-foreground">{index + 1}</span>
-                        </div>
+                    {/* Number above card for ALL steps */}
+                    <div className="flex justify-center mb-4">
+                      <div className="w-12 h-12 bg-gray-400 rounded-full flex items-center justify-center shadow-lg">
+                        <span className="text-2xl font-bold text-white">{index + 1}</span>
                       </div>
-                    )}
+                    </div>
                     
                     {/* Step Content */}
-                    <Card className={`group hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 border-border bg-white ${isEven ? 'mt-0' : 'mt-32'}`}>
+                    <Card className={`group hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 border-border bg-white ${isEven ? 'mt-0' : 'mt-16'}`}>
                       <CardContent className="p-6">
                         <div className="text-center space-y-4">
-                          {/* Number above card for steps 1, 3, 5, 7 */}
-                          {shouldShowNumberAbove && (
-                            <div className="flex justify-center mb-4">
-                              <div className="w-16 h-16 bg-gradient-premium rounded-full flex items-center justify-center shadow-lg">
-                                <span className="text-2xl font-bold text-primary-foreground">{index + 1}</span>
-                              </div>
-                            </div>
-                          )}
-                          
                           <div>
                             <h3 className="text-lg font-semibold text-foreground mb-2">
                               {step.title}
@@ -161,7 +149,7 @@ const ServicesRoadmap = () => {
             const IconComponent = step.icon;
             
             return (
-              <Card key={index} className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 border-border bg-card/50 backdrop-blur-sm">
+              <Card key={index} className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 border-border bg-white">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
                     {/* Step Number and Icon */}
@@ -186,9 +174,7 @@ const ServicesRoadmap = () => {
                         {step.description}
                       </p>
                       
-                      <div className="text-xs text-primary/80 bg-primary/10 rounded-lg p-3">
-                        {step.details}
-                      </div>
+                      {/* Removed the details section for mobile */}
                     </div>
                     
                     {/* Arrow for mobile */}
