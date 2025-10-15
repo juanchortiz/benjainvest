@@ -34,7 +34,7 @@ const ExpertiseSection = () => {
 
         <div className="flex justify-center">
           <div className="max-w-4xl">
-            <h3 className="text-3xl font-bold text-foreground mb-8 text-center">{t('expertise.myExpertise')}</h3>
+            <h3 className="text-3xl font-bold text-foreground mb-8 text-center hidden md:block">{t('expertise.myExpertise')}</h3>
             <div className="grid sm:grid-cols-3 gap-6">
               {credentials.map((credential, index) => <Card key={index} className="border-border hover:shadow-soft transition-all duration-300">
                   <CardContent className="p-6">

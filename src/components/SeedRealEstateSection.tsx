@@ -33,7 +33,7 @@ const SeedRealEstateSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <div className="space-y-8">
             <div className="relative">
-              <img src="/src/assets/lisbon-luxury-building.jpg" alt="Edificios de lujo en Lisboa" className="w-full h-80 object-cover rounded-2xl shadow-elegant" />
+              <img src="/lovable-uploads/70708b46-c426-4025-afc9-6e6ada93ca11.png" alt="Edificios de lujo en Lisboa" className="w-full h-80 object-cover rounded-2xl shadow-elegant" />
             </div>
           </div>
           
@@ -42,7 +42,7 @@ const SeedRealEstateSection = () => {
               <h3 className="text-3xl font-bold text-foreground mb-6">
                 {t('seedRealEstate.competitiveAdvantages')}
               </h3>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8">{t('seedRealEstate.advantagesDesc')}</p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8 hidden md:block">{t('seedRealEstate.advantagesDesc')}</p>
             </div>
 
             <div className="grid gap-4">

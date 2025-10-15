@@ -100,20 +100,20 @@ const ContactSection = () => {
   return <section className="py-12 md:py-20 bg-gradient-modern-left relative overflow-hidden">
       {/* Removed background image overlay to show full gradient color */}
       
-      <div className="container mx-auto px-4 md:px-6 relative z-10">
+      <div className="container mx-auto px-6 md:px-6 relative z-10">
         <div className="text-center space-y-4 mb-8 md:mb-16">
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-primary-foreground">{t('contact.title')}</h2>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12">
-          <Card className="shadow-elegant border-border">
-            <CardHeader className="p-4 md:p-6">
+          <Card className="shadow-elegant border-border overflow-hidden">
+            <CardHeader className="p-6 md:p-6">
               <CardTitle className="text-lg md:text-2xl text-foreground flex items-center gap-2 md:gap-3">
                 <MessageSquare className="h-5 w-5 md:h-6 md:w-6 text-primary" />
                 {t('contact.sendMessage')}
               </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-4 md:space-y-6 p-4 md:p-6">
+            <CardContent className="space-y-4 md:space-y-6 p-6 md:p-6">
               <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
