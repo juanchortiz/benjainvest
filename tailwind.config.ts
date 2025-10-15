@@ -18,6 +18,11 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'recoleta': ['Recoleta', 'serif'],
+				'manrope': ['Manrope', 'sans-serif'],
+				'sans': ['Manrope', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -72,7 +77,8 @@ export default {
 				'gradient-premium': 'var(--gradient-premium)',
 				'gradient-subtle': 'var(--gradient-subtle)',
 				'gradient-hero': 'var(--gradient-hero)',
-				'gradient-modern': 'var(--gradient-modern)'
+				'gradient-modern': 'var(--gradient-modern)',
+				'gradient-modern-left': 'var(--gradient-modern-left)'
 			},
 			boxShadow: {
 				'elegant': 'var(--shadow-elegant)',

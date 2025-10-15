@@ -3,10 +3,21 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Sun, Shield, Heart, TrendingUp, Globe, MapPin } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext, type CarouselApi } from "@/components/ui/carousel";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import GoldenVisaSection from "@/components/GoldenVisaSection";
+import { useTranslation } from "react-i18next";
+import { useCountUp } from "@/hooks/use-count-up";
+
 const WhyPortugalSection = () => {
+  const { t } = useTranslation();
   const [api, setApi] = React.useState<CarouselApi | null>(null);
   const [paused, setPaused] = React.useState(false);
+  const [current, setCurrent] = React.useState(0);
+  const [count, setCount] = React.useState(0);
+
+  // Rolling number animations for KPIs
+  const priceIndex = useCountUp({ end: 17.2, duration: 2000, decimals: 1, suffix: '%' });
+  const volumeTraded = useCountUp({ end: 30.4, duration: 2000, decimals: 1, prefix: '+', suffix: '%' });
+  const totalVolume = useCountUp({ end: 33.5, duration: 2000, decimals: 1, prefix: '€', suffix: 'B' });
+  
   const lisbonImages = [{
     src: "/lovable-uploads/8ebf12d9-ebfb-4fa8-9fe5-67bae50ea031.png",
     alt: "Coloridos edificios de Lisboa con terrazas para comer al aire libre"
@@ -20,6 +31,18 @@ const WhyPortugalSection = () => {
     src: "/lovable-uploads/70708b46-c426-4025-afc9-6e6ada93ca11.png",
     alt: "Arquitectura tradicional portuguesa con edificios coloridos"
   }];
+  
+  React.useEffect(() => {
+    if (!api) return;
+    
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap());
+    
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
+  
   React.useEffect(() => {
     if (!api) return;
     const interval = setInterval(() => {
@@ -31,26 +54,25 @@ const WhyPortugalSection = () => {
   }, [api, paused]);
   const benefits = [{
     icon: Sun,
-    title: "Clima Perfecto",
-    description: "300+ días de sol al año con inviernos suaves. Vida ideal todo el año."
+    title: t('whyPortugal.perfectClimate'),
+    description: t('whyPortugal.perfectClimateDesc')
   }, {
     icon: Shield,
-    title: "Seguridad",
-    description: "Uno de los países más seguros con baja criminalidad y estabilidad política."
+    title: t('whyPortugal.safety'),
+    description: t('whyPortugal.safetyDesc')
   }, {
     icon: Globe,
-    title: "Acceso UE",
-    description: "Puerta a Europa con excelente conectividad y opciones de residencia."
+    title: t('whyPortugal.euAccess'),
+    description: t('whyPortugal.euAccessDesc')
   }];
   return <section className="py-20 bg-card relative overflow-hidden">      
       <div className="container mx-auto px-6">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground">
-            ¿Por qué Portugal y Lisboa?
+            {t('whyPortugal.title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Portugal ofrece la combinación perfecta de estilo de vida, potencial de inversión y acceso europeo. 
-            Descubre por qué inversionistas internacionales eligen Portugal.
+            {t('whyPortugal.description')}
           </p>
         </div>
         
@@ -72,7 +94,7 @@ const WhyPortugalSection = () => {
         
         <div className="mt-16 grid lg:grid-cols-2 gap-12 items-center">
           <div className="relative rounded-3xl shadow-elegant overflow-hidden" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
-            <Carousel setApi={setApi} className="w-full">
+            <Carousel setApi={setApi} className="w-full" opts={{ loop: true }}>
               <CarouselContent>
                 {lisbonImages.map((image, index) => <CarouselItem key={index}>
                     <AspectRatio ratio={16 / 9}>
@@ -80,67 +102,84 @@ const WhyPortugalSection = () => {
                     </AspectRatio>
                   </CarouselItem>)}
               </CarouselContent>
-              <CarouselPrevious className="left-4 top-1/2 -translate-y-1/2" />
-              <CarouselNext className="right-4 top-1/2 -translate-y-1/2" />
+              <CarouselPrevious className="left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white" />
+              <CarouselNext className="right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white" />
             </Carousel>
-            <div className="absolute inset-0 bg-gradient-hero opacity-30 pointer-events-none"></div>
+            
+            {/* Indicadores de puntos */}
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+              {Array.from({ length: count }).map((_, index) => (
+                <button
+                  key={index}
+                  className={`h-2 rounded-full transition-all ${
+                    index === current 
+                      ? 'w-8 bg-white' 
+                      : 'w-2 bg-white/50 hover:bg-white/75'
+                  }`}
+                  onClick={() => api?.scrollTo(index)}
+                  aria-label={`Ir a imagen ${index + 1}`}
+                />
+              ))}
+            </div>
+            
+            {/* Contador de imágenes */}
+            <div className="absolute top-4 right-4 bg-black/50 text-white px-3 py-1 rounded-full text-sm z-10">
+              {current + 1} / {count}
+            </div>
+            
+            <div className="absolute inset-0 bg-gradient-hero opacity-20 pointer-events-none"></div>
           </div>
           
           <div className="bg-gradient-subtle rounded-3xl p-8 lg:p-12 shadow-elegant">
             <h3 className="text-3xl font-bold text-foreground mb-6">
-              Lisboa: Estrella Emergente de Europa
+              {t('whyPortugal.lisbonStar')}
             </h3>
             <div className="space-y-4 mb-8">
               <div className="flex items-center gap-4">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span className="text-muted-foreground">Patrimonio UNESCO con arquitectura impresionante</span>
+                <span className="text-muted-foreground">{t('whyPortugal.unescoHeritage')}</span>
               </div>
               <div className="flex items-center gap-4">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span className="text-muted-foreground">Hub tecnológico creciente atrayendo empresas globales</span>
+                <span className="text-muted-foreground">{t('whyPortugal.techHub')}</span>
               </div>
               <div className="flex items-center gap-4">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span className="text-muted-foreground">Excelente infraestructura y conectividad</span>
+                <span className="text-muted-foreground">{t('whyPortugal.infrastructure')}</span>
               </div>
               <div className="flex items-center gap-4">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span className="text-muted-foreground">Escena cultural vibrante y estilo de vida</span>
+                <span className="text-muted-foreground">{t('whyPortugal.culturalScene')}</span>
               </div>
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              <div className="text-center p-4 bg-card rounded-2xl shadow-soft">
-                <div className="text-2xl font-bold text-primary mb-1">7%</div>
-                <div className="text-xs text-muted-foreground">Rentabilidad Alquiler</div>
+              <div ref={priceIndex.elementRef} className="text-center p-4 bg-card rounded-2xl shadow-soft">
+                <div className="text-2xl font-bold text-primary mb-1">{priceIndex.displayValue}</div>
+                <div className="text-xs text-muted-foreground">{t('whyPortugal.priceIndex')}</div>
               </div>
-              <div className="text-center p-4 bg-card rounded-2xl shadow-soft">
-                <div className="text-2xl font-bold text-primary mb-1">€7.3B</div>
-                <div className="text-xs text-muted-foreground">Inversión Extranjera</div>
+              <div ref={volumeTraded.elementRef} className="text-center p-4 bg-card rounded-2xl shadow-soft">
+                <div className="text-2xl font-bold text-primary mb-1">{volumeTraded.displayValue}</div>
+                <div className="text-xs text-muted-foreground">{t('whyPortugal.volumeTraded')}</div>
               </div>
-              <div className="text-center p-4 bg-card rounded-2xl shadow-soft">
-                <div className="text-2xl font-bold text-primary mb-1">18.3%</div>
-                <div className="text-xs text-muted-foreground">Apreciación Inmobiliaria</div>
+              <div ref={totalVolume.elementRef} className="text-center p-4 bg-card rounded-2xl shadow-soft">
+                <div className="text-2xl font-bold text-primary mb-1">{totalVolume.displayValue}</div>
+                <div className="text-xs text-muted-foreground">{t('whyPortugal.totalVolume')}</div>
               </div>
             </div>
             <a 
-              href="https://www.idealista.pt/news/imobiliario/habitacao/2025/09/22/71712-venda-de-casas-volta-a-crescer-e-preco-atinge-maior-subida-de-sempre" 
+              href="https://www.ine.pt/xportal/xmain?xpid=INE&xpgid=ine_destaques&DESTAQUESdest_boui=706274657&DESTAQUESmodo=2" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-xs text-muted-foreground/60 hover:text-muted-foreground transition-colors mt-4 inline-block"
             >
-              Fuente: Idealista.pt
+              {t('whyPortugal.source')}
             </a>
           </div>
         </div>
 
         {/* Chilean Investment Section */}
         
-        
-        {/* Golden Visa Section */}
-        <div className="mt-20">
-          <GoldenVisaSection />
-        </div>
       </div>
     </section>;
 };

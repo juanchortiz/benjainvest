@@ -1,57 +1,48 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Database, Users2, Zap, Shield, Target } from "lucide-react";
+import { ExternalLink, Database, Users2, Zap, Target } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import React from "react";
+import { useTranslation } from "react-i18next";
+
 const SeedRealEstateSection = () => {
+  const { t } = useTranslation();
+  
   const advantages = [{
     icon: Database,
-    title: "Acceso Exclusivo",
-    description: "Propiedades no públicas y oportunidades únicas en el mercado portugués."
+    title: t('seedRealEstate.exclusiveAccessTitle'),
+    description: t('seedRealEstate.exclusiveAccessDesc')
   }, {
     icon: Users2,
-    title: "Red Establecida",
-    description: "Contactos directos con desarrolladores, inversionistas y profesionales clave."
-  }, {
-    icon: Shield,
-    title: "Credibilidad",
-    description: "Respaldo de una marca reconocida que garantiza confianza en cada transacción."
+    title: t('seedRealEstate.establishedNetwork'),
+    description: t('seedRealEstate.establishedNetworkDesc')
   }, {
     icon: Zap,
-    title: "Recursos Avanzados",
-    description: "Herramientas tecnológicas y análisis de mercado de vanguardia."
+    title: t('seedRealEstate.advancedResources'),
+    description: t('seedRealEstate.advancedResourcesDesc')
   }];
   return <section className="py-20 bg-gradient-subtle relative overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground">
-            Respaldado por <span className="bg-gradient-premium bg-clip-text text-transparent">Seed Real Estate</span>
+            {t('seedRealEstate.title')} <span className="bg-gradient-premium bg-clip-text text-transparent">{t('seedRealEstate.titleHighlight')}</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">Como representante de Seed Real Estate, consultora inmobiliaria líder en Portugal, ofrezco acceso privilegiado y recursos exclusivos en el mercado portugués.</p>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">{t('seedRealEstate.description')}</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <div className="space-y-8">
             <div className="relative">
               <img src="/src/assets/lisbon-luxury-building.jpg" alt="Edificios de lujo en Lisboa" className="w-full h-80 object-cover rounded-2xl shadow-elegant" />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent rounded-2xl"></div>
-              <div className="absolute bottom-6 left-6 right-6">
-                <h3 className="text-2xl font-bold text-foreground mb-2">
-                  Propiedades Premium en Lisboa
-                </h3>
-                <p className="text-muted-foreground">
-                  Acceso exclusivo al portfolio de inmuebles de alta gama
-                </p>
-              </div>
             </div>
           </div>
           
           <div className="space-y-6">
             <div>
               <h3 className="text-3xl font-bold text-foreground mb-6">
-                Ventajas Competitivas
+                {t('seedRealEstate.competitiveAdvantages')}
               </h3>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8">Esta asociación estratégica me permite brindar un nivel de servicio y acceso que va más allá de lo que un consultor independiente puede ofrecer.</p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8">{t('seedRealEstate.advantagesDesc')}</p>
             </div>
 
             <div className="grid gap-4">

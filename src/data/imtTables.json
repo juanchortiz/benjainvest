@@ -1,0 +1,114 @@
+{
+  "ano": 2025,
+  "continente": {
+    "habitacaoPropriaPermanente": [
+      {
+        "min": 0,
+        "max": 104261,
+        "taxa": 0,
+        "parcelaAbater": 0
+      },
+      {
+        "min": 104261,
+        "max": 142618,
+        "taxa": 2,
+        "parcelaAbater": 2085.22
+      },
+      {
+        "min": 142618,
+        "max": 194458,
+        "taxa": 5,
+        "parcelaAbater": 5344.94
+      },
+      {
+        "min": 194458,
+        "max": 324058,
+        "taxa": 7,
+        "parcelaAbater": 9233.26
+      },
+      {
+        "min": 324058,
+        "max": 648022,
+        "taxa": 8,
+        "parcelaAbater": 12473.70
+      },
+      {
+        "min": 648022,
+        "max": 1128287,
+        "taxa": 8,
+        "parcelaAbater": 12473.70
+      }
+    ],
+    "habitacaoSecundaria": [
+      {
+        "min": 0,
+        "max": 104261,
+        "taxa": 1,
+        "parcelaAbater": 0
+      },
+      {
+        "min": 104261,
+        "max": 142618,
+        "taxa": 2,
+        "parcelaAbater": 1042.61
+      },
+      {
+        "min": 142618,
+        "max": 194458,
+        "taxa": 5,
+        "parcelaAbater": 5324.15
+      },
+      {
+        "min": 194458,
+        "max": 324058,
+        "taxa": 7,
+        "parcelaAbater": 9213.47
+      },
+      {
+        "min": 324058,
+        "max": 648022,
+        "taxa": 8,
+        "parcelaAbater": 12453.91
+      },
+      {
+        "min": 648022,
+        "max": 1128287,
+        "taxa": 8,
+        "parcelaAbater": 12453.91
+      }
+    ],
+    "outros": [
+      {
+        "min": 0,
+        "max": 1128287,
+        "taxa": 6.5,
+        "parcelaAbater": 0
+      }
+    ],
+    "predioRustico": [
+      {
+        "min": 0,
+        "max": 1128287,
+        "taxa": 5,
+        "parcelaAbater": 0
+      }
+    ]
+  },
+  "regimeJovem": {
+    "idadeMaxima": 35,
+    "limiteIsencao": 324058,
+    "limiteReducao": 648022,
+    "taxaReducao": 8,
+    "limiteMaximo": 1128287,
+    "taxaMaxima": 7.5
+  },
+  "impostoSelo": {
+    "taxa": 0.8,
+    "isentoRegimeJovem": true
+  },
+  "multiplicadorRegioes": {
+    "madeira": 0.9,
+    "acores": 0.9
+  }
+}
+

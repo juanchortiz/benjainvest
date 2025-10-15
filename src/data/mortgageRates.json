@@ -1,0 +1,50 @@
+{
+  "ano": 2025,
+  "euribor": {
+    "3m": 2.5,
+    "6m": 2.65,
+    "12m": 2.8
+  },
+  "spreads": {
+    "minimo": 0.5,
+    "medio": 1.2,
+    "maximo": 2.5
+  },
+  "tasasFijas": {
+    "10anos": 3.5,
+    "15anos": 3.75,
+    "20anos": 4.0,
+    "25anos": 4.25,
+    "30anos": 4.5,
+    "35anos": 4.75,
+    "40anos": 5.0
+  },
+  "limitesFinanciamiento": {
+    "general": 80,
+    "conGarantia": 90,
+    "jovenes": 100
+  },
+  "limitesEdad": {
+    "hasta30": 40,
+    "hasta35": 37,
+    "mas35": 35
+  },
+  "comisiones": {
+    "aperturaMin": 0,
+    "aperturaMax": 1.5,
+    "amortizacionAnticipada": {
+      "fija": 2,
+      "variable": 0.5
+    }
+  },
+  "seguros": {
+    "vidaAnual": 0.15,
+    "multiriscosAnual": 0.10
+  },
+  "garantiaEstatal": {
+    "edadMaxima": 35,
+    "porcentajeMaximo": 15,
+    "soloViviendaPermanente": true
+  }
+}
+

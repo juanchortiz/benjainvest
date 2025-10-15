@@ -3,6 +3,8 @@ import HeroSection from "@/components/HeroSection";
 import WhyPortugalSection from "@/components/WhyPortugalSection";
 import ExpertiseSection from "@/components/ExpertiseSection";
 import SeedRealEstateSection from "@/components/SeedRealEstateSection";
+import IMTSimulator from "@/components/IMTSimulator";
+import MortgageSimulator from "@/components/MortgageSimulator";
 import ContactSection from "@/components/ContactSection";
 import StickyContactButton from "@/components/StickyContactButton";
 import { AIChatWidget } from "@/components/AIChatWidget";
@@ -22,6 +24,12 @@ const Index = () => {
         <section id="seed">
           <SeedRealEstateSection />
         </section>
+        <section id="imt">
+          <IMTSimulator />
+        </section>
+        <section id="mortgage">
+          <MortgageSimulator />
+        </section>
         <section id="contact">
           <ContactSection />
         </section>
@@ -38,7 +46,7 @@ const Index = () => {
                 </div>
                 <div>
                   <div className="font-bold text-foreground">Benjamín Valdivia</div>
-                  <div className="text-xs text-muted-foreground">Consultor Inmobiliario</div>
+                  <div className="text-xs text-muted-foreground">Agente Privado</div>
                 </div>
               </div>
               <p className="text-muted-foreground text-sm">
@@ -64,7 +72,7 @@ const Index = () => {
         </div>
       </footer>
       <StickyContactButton />
-      <AIChatWidget />
+      {/* AIChatWidget removed per request; WhatsApp floater remains */}
     </div>;
 };
 export default Index;

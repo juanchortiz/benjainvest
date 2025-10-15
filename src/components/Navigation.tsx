@@ -2,19 +2,27 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Calendar } from "lucide-react";
 import { openGoogleCalendarBooking } from "@/utils/googleCalendar";
+import { useTranslation } from "react-i18next";
+import LanguageToggle from "./LanguageToggle";
+
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useTranslation();
+  
   const navItems = [{
-    label: "Por qué Portugal",
+    label: t('nav.whyPortugal'),
     href: "#portugal"
   }, {
-    label: "Mi Experiencia",
+    label: t('nav.myExpertise'),
     href: "#expertise"
   }, {
-    label: "Golden Visa",
-    href: "#golden-visa"
+    label: t('nav.imtSimulator'),
+    href: "#imt"
   }, {
-    label: "Contacto",
+    label: t('nav.mortgageSimulator'),
+    href: "#mortgage"
+  }, {
+    label: t('nav.contact'),
     href: "#contact"
   }];
   return <nav className="fixed top-0 left-0 right-0 z-50 bg-card/80 backdrop-blur-lg border-b border-border">
@@ -24,23 +32,24 @@ const Navigation = () => {
           <div className="flex items-center gap-3">
             
             <div>
-              <div className="font-bold text-foreground">Benjamín Valdivia</div>
-              <div className="text-xs text-muted-foreground">Consultor Inmobiliario</div>
+              <div className="font-bold text-foreground text-base">Benjamín Valdivia</div>
+              <div className="text-sm text-muted-foreground">Agente Privado</div>
             </div>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navItems.map(item => <a key={item.label} href={item.href} className="text-sm text-foreground/80 hover:text-foreground transition-colors duration-300">
+            {navItems.map(item => <a key={item.label} href={item.href} className="text-base text-foreground/80 hover:text-foreground transition-colors duration-300">
                 {item.label}
               </a>)}
           </div>
 
           {/* CTA Button */}
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center gap-2">
+            <LanguageToggle />
             <Button variant="premium" size="sm" className="group" onClick={openGoogleCalendarBooking}>
               <Calendar className="mr-2 h-4 w-4" />
-              Agendar Llamada
+              {t('nav.scheduleCall')}
             </Button>
           </div>
 
@@ -56,9 +65,12 @@ const Navigation = () => {
               {navItems.map(item => <a key={item.label} href={item.href} className="text-muted-foreground hover:text-foreground transition-colors duration-300 py-2" onClick={() => setIsOpen(false)}>
                   {item.label}
                 </a>)}
+              <div className="flex justify-center pt-2">
+                <LanguageToggle />
+              </div>
               <Button variant="premium" size="sm" className="mt-4 w-full" onClick={openGoogleCalendarBooking}>
                 <Calendar className="mr-2 h-4 w-4" />
-                Agendar Llamada
+                {t('nav.scheduleCall')}
               </Button>
             </div>
           </div>}

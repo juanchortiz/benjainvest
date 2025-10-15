@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 const StickyContactButton = () => {
+  const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -17,8 +19,8 @@ const StickyContactButton = () => {
   }, []);
 
   const openWhatsApp = () => {
-    const phoneNumber = "351933763233";
-    const message = "Hola, me interesa recibir más información sobre inversiones inmobiliarias en Portugal.";
+    const phoneNumber = "351937958969";
+    const message = t('stickyButton.whatsappMessage');
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
