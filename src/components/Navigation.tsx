@@ -14,9 +14,6 @@ const Navigation = () => {
     label: t('nav.whyPortugal'),
     href: "#portugal"
   }, {
-    label: t('nav.myExpertise'),
-    href: "#expertise"
-  }, {
     label: t('nav.roadmap'),
     href: "#roadmap"
   }, {

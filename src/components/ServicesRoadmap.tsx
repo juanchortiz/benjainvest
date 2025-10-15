@@ -69,14 +69,32 @@ const ServicesRoadmap = () => {
   ];
 
   return (
-    <section id="roadmap" className="py-20 bg-gradient-subtle relative overflow-hidden">
-      <div className="container mx-auto px-6">
+    <section id="roadmap" className="py-20 bg-gradient-modern-left relative overflow-hidden">
+      {/* Geometric Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Large Triangle - Top Right */}
+        <div className="absolute -top-32 -right-32 w-96 h-96 bg-primary/5 rotate-45 rounded-2xl"></div>
+        
+        {/* Medium Circle - Bottom Left */}
+        <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-primary/8 rounded-full"></div>
+        
+        {/* Small Rectangle - Center Right */}
+        <div className="absolute top-1/2 -right-16 w-32 h-32 bg-primary/6 rotate-12 rounded-xl"></div>
+        
+        {/* Hexagon - Top Center */}
+        <div className="absolute top-20 left-1/2 transform -translate-x-1/2 w-24 h-24 bg-primary/7 rotate-45 rounded-lg"></div>
+        
+        {/* Small Triangle - Bottom Right */}
+        <div className="absolute bottom-16 right-20 w-20 h-20 bg-primary/5 rotate-45 rounded-lg"></div>
+      </div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
         <div className="text-center space-y-4 mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground">
+          <h2 className="text-4xl lg:text-5xl font-bold text-primary-foreground">
             {t('roadmap.title')}
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-primary-foreground/80 max-w-3xl mx-auto">
             {t('roadmap.subtitle')}
           </p>
         </div>
@@ -92,21 +110,31 @@ const ServicesRoadmap = () => {
               {roadmapSteps.map((step, index) => {
                 const IconComponent = step.icon;
                 const isEven = index % 2 === 0;
+                const shouldShowNumberAbove = [0, 2, 4, 6].includes(index); // Steps 1, 3, 5, 7 (0-indexed)
                 
                 return (
                   <div key={index} className="relative">
-                    {/* Timeline Node */}
-                    <div className="absolute top-16 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-                      <div className="w-8 h-8 bg-gradient-premium rounded-full flex items-center justify-center shadow-lg">
-                        <span className="text-sm font-bold text-primary-foreground">{index + 1}</span>
+                    {/* Timeline Node - Only for steps 2, 4, 6, 8 */}
+                    {!shouldShowNumberAbove && (
+                      <div className="absolute top-16 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+                        <div className="w-8 h-8 bg-gradient-premium rounded-full flex items-center justify-center shadow-lg">
+                          <span className="text-sm font-bold text-primary-foreground">{index + 1}</span>
+                        </div>
                       </div>
-                    </div>
+                    )}
                     
                     {/* Step Content */}
                     <Card className={`group hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 border-border bg-card/50 backdrop-blur-sm ${isEven ? 'mt-0' : 'mt-32'}`}>
                       <CardContent className="p-6">
                         <div className="text-center space-y-4">
-                          {/* Hidden icon on desktop, show only number */}
+                          {/* Number above card for steps 1, 3, 5, 7 */}
+                          {shouldShowNumberAbove && (
+                            <div className="flex justify-center mb-4">
+                              <div className="w-8 h-8 bg-gradient-premium rounded-full flex items-center justify-center shadow-lg">
+                                <span className="text-sm font-bold text-primary-foreground">{index + 1}</span>
+                              </div>
+                            </div>
+                          )}
                           
                           <div>
                             <h3 className="text-lg font-semibold text-foreground mb-2">
@@ -181,7 +209,7 @@ const ServicesRoadmap = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <p className="text-lg text-muted-foreground mb-6">
+          <p className="text-lg text-primary-foreground/80 mb-6">
             {t('roadmap.cta')}
           </p>
           <a 
