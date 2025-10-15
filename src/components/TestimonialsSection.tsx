@@ -12,7 +12,7 @@ const TestimonialsSection = () => {
       location: "Madrid, España",
       investment: "€450,000",
       property: "Apartamento en Chiado, Lisboa",
-      image: "/client-maria.jpg",
+      image: "/maria.jpeg",
       quote: t('testimonials.mariaQuote'),
       rating: 5
     },
@@ -21,7 +21,7 @@ const TestimonialsSection = () => {
       location: "Barcelona, España", 
       investment: "€680,000",
       property: "Casa en Cascais",
-      image: "/client-carlos.jpg",
+      image: "/carlos.jpeg",
       quote: t('testimonials.carlosQuote'),
       rating: 5
     },
@@ -30,7 +30,7 @@ const TestimonialsSection = () => {
       location: "São Paulo, Brasil",
       investment: "€320,000",
       property: "Apartamento en Príncipe Real, Lisboa",
-      image: "/client-ana.jpg",
+      image: "/ana.jpeg",
       quote: t('testimonials.anaQuote'),
       rating: 5
     }

@@ -25,7 +25,7 @@ module.exports = async (req, res) => {
 
     await resend.emails.send({
       from: 'contacto@benjainvest.pt',
-      to: ['jaortiz.cancino@gmail.com'],
+      to: ['jaortiz.cancino@gmail.com', 'benjamin@seedrealestate.pt'],
       subject: 'Nuevo contacto desde Benjainvest.pt',
       html: `
         <p><strong>Name:</strong> ${firstName} ${lastName}</p>

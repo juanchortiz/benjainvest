@@ -24,7 +24,6 @@ type ContactFormData = z.infer<ReturnType<typeof getContactFormSchema>>;
 
 const ContactSection = () => {
   const { t } = useTranslation();
-  console.log("🔍 ContactSection component rendered");
   
   const [formData, setFormData] = useState<ContactFormData>({
     firstName: "",
@@ -44,21 +43,13 @@ const ContactSection = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    console.log("🚀 handleSubmit called!");
-    console.log("📋 Event:", e);
     e.preventDefault();
-    
-    console.log("📝 Current form data:", formData);
-    console.log("🔍 Validating form data...");
     
     try {
       const contactFormSchema = getContactFormSchema(t);
-      const validatedData = contactFormSchema.parse(formData);
-      console.log("✅ Validation passed:", validatedData);
+      contactFormSchema.parse(formData);
     } catch (error) {
-      console.error("❌ Validation failed:", error);
       if (error instanceof z.ZodError) {
-        console.error("Validation errors:", error.errors);
         toast({
           title: t('contact.validationError'),
           description: error.errors[0].message,
@@ -69,18 +60,8 @@ const ContactSection = () => {
     }
 
     setIsSubmitting(true);
-    console.log("========== FORM SUBMISSION START ==========");
-    console.log("📋 Supabase config:");
-    console.log("   - URL:", import.meta.env.VITE_SUPABASE_URL);
-    console.log("   - Function endpoint:", `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`);
-    console.log("📝 Sanitized form data:", { 
-      ...formData, 
-      email: formData.email.substring(0, 3) + "***",
-      phone: formData.phone ? formData.phone.substring(0, 3) + "***" : "(empty)"
-    });
 
     try {
-      console.log('📤 Sending contact data to serverless API...');
       const res = await fetch('/api/send-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -90,7 +71,6 @@ const ContactSection = () => {
       toast({ title: t('contact.messageSent'), description: t('contact.messageSuccess') });
       setFormData({ firstName: '', lastName: '', email: '', phone: '', investmentGoal: '', message: '' });
     } catch (error: any) {
-      console.error('Error sending via serverless API', error);
       toast({ title: t('contact.messageError'), description: t('contact.messageErrorDesc'), variant: 'destructive' });
     } finally {
       setIsSubmitting(false);
@@ -196,10 +176,6 @@ const ContactSection = () => {
                   size="lg" 
                   className="w-full group"
                   disabled={isSubmitting}
-                  onClick={(e) => {
-                    console.log("🖱️ Button clicked!");
-                    console.log("Button event:", e);
-                  }}
                 >
                   {isSubmitting ? (
                     <>
@@ -212,19 +188,6 @@ const ContactSection = () => {
                       <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
                     </>
                   )}
-                </Button>
-                
-                {/* Test serverless API */}
-                <Button type="button" variant="outline" size="sm" className="w-full mt-4" onClick={async () => {
-                  try {
-                    const res = await fetch('/api/send-email', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ firstName: 'Test', lastName: 'User', email: 'test@example.com', phone: '+1234567890', investmentGoal: 'Test', message: 'Testing serverless email route' }) });
-                    if (res.ok) toast({ title: t('contact.testEmailSent'), description: t('contact.testEmailSuccess') });
-                    else throw new Error('Test failed');
-                  } catch (err) {
-                    toast({ title: t('contact.testFailed'), description: t('contact.testFailedDesc'), variant: 'destructive' });
-                  }
-                }}>
-                  {t('contact.testEmailFunction')}
                 </Button>
               </form>
             </CardContent>
