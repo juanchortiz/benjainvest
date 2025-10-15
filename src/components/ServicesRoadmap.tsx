@@ -102,8 +102,7 @@ const ServicesRoadmap = () => {
         {/* Desktop Timeline */}
         <div className="hidden lg:block">
           <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute top-16 left-0 right-0 h-0.5 bg-gradient-to-r from-primary via-primary/50 to-primary transform translate-y-8"></div>
+            {/* Timeline Line - Removed the dark line */}
             
             {/* Steps */}
             <div className="grid grid-cols-4 gap-8">
@@ -117,21 +116,21 @@ const ServicesRoadmap = () => {
                     {/* Timeline Node - Only for steps 2, 4, 6, 8 */}
                     {!shouldShowNumberAbove && (
                       <div className="absolute top-16 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-                        <div className="w-8 h-8 bg-gradient-premium rounded-full flex items-center justify-center shadow-lg">
-                          <span className="text-sm font-bold text-primary-foreground">{index + 1}</span>
+                        <div className="w-16 h-16 bg-gradient-premium rounded-full flex items-center justify-center shadow-lg">
+                          <span className="text-2xl font-bold text-primary-foreground">{index + 1}</span>
                         </div>
                       </div>
                     )}
                     
                     {/* Step Content */}
-                    <Card className={`group hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 border-border bg-card/50 backdrop-blur-sm ${isEven ? 'mt-0' : 'mt-32'}`}>
+                    <Card className={`group hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 border-border bg-white ${isEven ? 'mt-0' : 'mt-32'}`}>
                       <CardContent className="p-6">
                         <div className="text-center space-y-4">
                           {/* Number above card for steps 1, 3, 5, 7 */}
                           {shouldShowNumberAbove && (
                             <div className="flex justify-center mb-4">
-                              <div className="w-8 h-8 bg-gradient-premium rounded-full flex items-center justify-center shadow-lg">
-                                <span className="text-sm font-bold text-primary-foreground">{index + 1}</span>
+                              <div className="w-16 h-16 bg-gradient-premium rounded-full flex items-center justify-center shadow-lg">
+                                <span className="text-2xl font-bold text-primary-foreground">{index + 1}</span>
                               </div>
                             </div>
                           )}
@@ -145,9 +144,7 @@ const ServicesRoadmap = () => {
                             </p>
                           </div>
                           
-                          <div className="text-xs text-primary/80 bg-primary/10 rounded-lg p-3">
-                            {step.details}
-                          </div>
+                          {/* Removed the details section */}
                         </div>
                       </CardContent>
                     </Card>
