@@ -30,7 +30,7 @@ const TestimonialsSection = () => {
       location: "São Paulo, Brasil",
       investment: "€320,000",
       property: "Apartamento en Príncipe Real, Lisboa",
-      image: "/ana.jpeg",
+      image: "/Hideo.png",
       quote: t('testimonials.anaQuote'),
       rating: 5
     }
