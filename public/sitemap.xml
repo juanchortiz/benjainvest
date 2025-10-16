@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Main page -->
   <url>
-    <loc>https://benjainvest.com/</loc>
+    <loc>https://benjainvest.pt/</loc>
     <lastmod>2024-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -10,63 +10,63 @@
   
   <!-- Main page sections with anchors -->
   <url>
-    <loc>https://benjainvest.com/#home</loc>
+    <loc>https://benjainvest.pt/#home</loc>
     <lastmod>2024-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://benjainvest.com/#portugal</loc>
+    <loc>https://benjainvest.pt/#portugal</loc>
     <lastmod>2024-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://benjainvest.com/#expertise</loc>
+    <loc>https://benjainvest.pt/#expertise</loc>
     <lastmod>2024-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://benjainvest.com/#roadmap</loc>
+    <loc>https://benjainvest.pt/#roadmap</loc>
     <lastmod>2024-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://benjainvest.com/#seed</loc>
+    <loc>https://benjainvest.pt/#seed</loc>
     <lastmod>2024-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://benjainvest.com/#testimonials</loc>
+    <loc>https://benjainvest.pt/#testimonials</loc>
     <lastmod>2024-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://benjainvest.com/#imt</loc>
+    <loc>https://benjainvest.pt/#imt</loc>
     <lastmod>2024-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://benjainvest.com/#mortgage</loc>
+    <loc>https://benjainvest.pt/#mortgage</loc>
     <lastmod>2024-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://benjainvest.com/#contact</loc>
+    <loc>https://benjainvest.pt/#contact</loc>
     <lastmod>2024-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -74,14 +74,14 @@
   
   <!-- Language versions -->
   <url>
-    <loc>https://benjainvest.com/?lang=en</loc>
+    <loc>https://benjainvest.pt/?lang=en</loc>
     <lastmod>2024-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://benjainvest.com/?lang=es</loc>
+    <loc>https://benjainvest.pt/?lang=es</loc>
     <lastmod>2024-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
