@@ -20,14 +20,14 @@ const TestimonialsSection = () => {
       name: "Carlos Rodríguez",
       location: "Santiago de Chile, Chile", 
       investment: "€680,000",
-      property: "Casa en Cascais",
+      property: "Apartamento en Cascais",
       image: "/carlos.jpeg",
       quote: t('testimonials.carlosQuote'),
       rating: 5
     },
     {
-      name: "Ana Silva",
-      location: "São Paulo, Brasil",
+      name: "Hideo Yokoi",
+      location: "Lisboa, Portugal",
       investment: "€320,000",
       property: "Apartamento en Príncipe Real, Lisboa",
       image: "/Hideo.png",

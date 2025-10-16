@@ -33,7 +33,7 @@ const SeedRealEstateSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <div className="space-y-8">
             <div className="relative">
-              <img src="/lisboncaste.jpg" alt="Castillo de São Jorge y vista de Lisboa" className="w-full h-80 object-cover rounded-2xl shadow-elegant" />
+              <img src="/Team.jpeg" alt="Equipo Seed Real Estate" className="w-full h-80 object-cover rounded-2xl shadow-elegant" />
             </div>
           </div>
           
