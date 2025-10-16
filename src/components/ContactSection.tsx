@@ -100,20 +100,20 @@ const ContactSection = () => {
   return <section className="py-12 md:py-20 bg-gradient-modern-left relative overflow-hidden">
       {/* Removed background image overlay to show full gradient color */}
       
-      <div className="container mx-auto px-6 md:px-6 relative z-10">
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center space-y-4 mb-8 md:mb-16">
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-primary-foreground">{t('contact.title')}</h2>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12">
+        <div className="grid lg:grid-cols-2 gap-4 md:gap-8 lg:gap-12">
           <Card className="shadow-elegant border-border overflow-hidden">
-            <CardHeader className="p-6 md:p-6">
+            <CardHeader className="p-4 md:p-6">
               <CardTitle className="text-lg md:text-2xl text-foreground flex items-center gap-2 md:gap-3">
                 <MessageSquare className="h-5 w-5 md:h-6 md:w-6 text-primary" />
                 {t('contact.sendMessage')}
               </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-4 md:space-y-6 p-6 md:p-6">
+            <CardContent className="space-y-4 md:space-y-6 p-4 md:p-6">
               <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
@@ -213,26 +213,13 @@ const ContactSection = () => {
                     </>
                   )}
                 </Button>
-                
-                {/* Test serverless API */}
-                <Button type="button" variant="outline" size="sm" className="w-full mt-4" onClick={async () => {
-                  try {
-                    const res = await fetch('/api/send-email', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ firstName: 'Test', lastName: 'User', email: 'test@example.com', phone: '+1234567890', investmentGoal: 'Test', message: 'Testing serverless email route' }) });
-                    if (res.ok) toast({ title: t('contact.testEmailSent'), description: t('contact.testEmailSuccess') });
-                    else throw new Error('Test failed');
-                  } catch (err) {
-                    toast({ title: t('contact.testFailed'), description: t('contact.testFailedDesc'), variant: 'destructive' });
-                  }
-                }}>
-                  {t('contact.testEmailFunction')}
-                </Button>
               </form>
             </CardContent>
           </Card>
 
-          <div className="space-y-6 md:space-y-8">
+          <div className="space-y-4 md:space-y-8">
             <Card className="shadow-soft border-border hover:shadow-elegant transition-all duration-300">
-              <CardContent className="p-6 md:p-8">
+              <CardContent className="p-4 md:p-8">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-premium rounded-2xl flex items-center justify-center">
                     <Calendar className="h-6 w-6 md:h-8 md:w-8 text-primary-foreground" />
@@ -253,7 +240,7 @@ const ContactSection = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <Card className="shadow-soft border-border hover:shadow-elegant transition-all duration-300">
-                <CardContent className="p-4 md:p-6 text-center">
+                <CardContent className="p-3 md:p-6 text-center">
                   <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <Mail className="h-6 w-6 text-primary" />
                   </div>
@@ -268,7 +255,7 @@ const ContactSection = () => {
               </Card>
 
               <Card className="shadow-soft border-border hover:shadow-elegant transition-all duration-300">
-                <CardContent className="p-4 md:p-6 text-center">
+                <CardContent className="p-3 md:p-6 text-center">
                   <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <Phone className="h-6 w-6 text-primary" />
                   </div>
