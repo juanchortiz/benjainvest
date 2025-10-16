@@ -27,7 +27,7 @@ const ExpertiseSection = () => {
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground">
             {t('expertise.title')}
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="hidden md:block text-xl text-muted-foreground max-w-3xl mx-auto">
             {t('expertise.description')}
           </p>
         </div>
