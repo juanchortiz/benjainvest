@@ -17,7 +17,7 @@ const LanguageToggle = () => {
       className="gap-2"
     >
       <span className="text-lg">
-        {i18n.language === 'es' ? '🇺🇸' : '🇪🇸'}
+        {i18n.language === 'es' ? '🇬🇧' : '🇪🇸'}
       </span>
       {i18n.language === 'es' ? 'EN' : 'ES'}
     </Button>
