@@ -82,7 +82,7 @@
     "exclusiveAccessTitle": "Exclusive Access",
     "exclusiveAccessDesc": "Non-public properties and unique opportunities in the Portuguese market.",
     "establishedNetwork": "Established Network",
-    "establishedNetworkDesc": "Direct contacts with developers, investors, and key professionals.",
+    "establishedNetworkDesc": "Direct contacts with lawyers, accountants, local builders, engineers and banks.",
     "credibility": "Credibility",
     "credibilityDesc": "Backing of a recognized brand that ensures trust in every transaction.",
     "advancedResources": "Advanced Resources",
@@ -251,13 +251,13 @@
     "anaQuote": "The best private agent I've worked with so far after 7 years in Portugal. Honest, caring, professional, strategic, fast, the entire experience was excellent. Highly recommended working with Benjamin and Seed Real Estate."
   },
   "roadmap": {
-    "title": "Real Estate Process Roadmap",
-    "subtitle": "These are the steps that will lead us to success in your purchase process",
+    "title": "Portugal Real Estate Process Roadmap",
+    "subtitle": "We work together in each of these stages to achieve your investment objectives.",
     "cta": "Ready to start your real estate investment process?",
     "ctaButton": "Start My Process",
     "step1": {
       "title": "Initial Consultation",
-      "description": "Complete analysis of your investor profile and definition of investment objectives.",
+      "description": "Complete analysis of your investor profile, definition of investment objectives and tax advice.",
       "details": "Client profile, financing options, Portuguese legal process, taxes and market study"
     },
     "step2": {
@@ -267,7 +267,7 @@
     },
     "step3": {
       "title": "Property Search",
-      "description": "Property identification according to specific criteria and access to exclusive listings.",
+      "description": "Market Studies, property prospecting according to specific criteria and Access to exclusive opportunities.",
       "details": "Custom criteria, exclusive access, profitability analysis and strategic location"
     },
     "step4": {
@@ -287,7 +287,7 @@
     },
     "step7": {
       "title": "Post-Purchase & Management",
-      "description": "Assistance with renovations, insurance, furniture and property administration.",
+      "description": "Construction management, remodeling, insurance and property management.",
       "details": "Renovations, insurance, furniture, administration, AL licenses and maintenance"
     },
     "step8": {

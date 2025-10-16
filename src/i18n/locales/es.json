@@ -82,7 +82,7 @@
     "exclusiveAccessTitle": "Acceso Exclusivo",
     "exclusiveAccessDesc": "Propiedades no públicas y oportunidades únicas en el mercado portugués.",
     "establishedNetwork": "Red Establecida",
-    "establishedNetworkDesc": "Contactos directos con desarrolladores, inversionistas y profesionales clave.",
+    "establishedNetworkDesc": "Contactos directos con abogados, contadores, constructores locales, ingenieros y bancos.",
     "credibility": "Credibilidad",
     "credibilityDesc": "Respaldo de una marca reconocida que garantiza confianza en cada transacción.",
     "advancedResources": "Recursos Avanzados",
@@ -251,13 +251,13 @@
     "anaQuote": "El mejor agente privado con el que trabajé hasta ahora luego de 7 años en Portugal. Honesto, preocupado, profesional, estratégico, rápido, toda la experiencia fue excelente. Altamente recomendado trabajar con Benjamin y Seed Real Estate."
   },
   "roadmap": {
-    "title": "Roadmap del Proceso Inmobiliario",
-    "subtitle": "Estos son los pasos que nos llevarán al éxito en tu proceso de compra",
+    "title": "Roadmap del Proceso Inmobiliario Portugal",
+    "subtitle": "Trabajamos juntos en cada una de estas etapas para conseguir tus objetivos de inversión.",
     "cta": "¿Listo para comenzar tu proceso de inversión inmobiliaria?",
     "ctaButton": "Iniciar Mi Proceso",
     "step1": {
       "title": "Asesoría Inicial",
-      "description": "Análisis completo de tu perfil como inversor y definición de objetivos de inversión.",
+      "description": "Análisis completo de tu perfil como inversor, definición de objetivos de inversión y asesoramiento fiscal.",
       "details": "Perfil de cliente, opciones de financiación, proceso legal portugués, impuestos y estudio de mercado"
     },
     "step2": {
@@ -267,7 +267,7 @@
     },
     "step3": {
       "title": "Búsqueda de Propiedades",
-      "description": "Identificación de inmuebles según criterios específicos y acceso a listados exclusivos.",
+      "description": "Estudios de Mercado, prospección de inmuebles según criterios específicos y Acceso a oportunidades exclusivas.",
       "details": "Criterios personalizados, acceso exclusivo, análisis de rentabilidad y ubicación estratégica"
     },
     "step4": {
@@ -287,7 +287,7 @@
     },
     "step7": {
       "title": "Post-Compra y Gestión",
-      "description": "Asistencia en renovaciones, seguros, mobiliario y administración de la propiedad.",
+      "description": "Gestión de construcción, remodelación, seguros y property management.",
       "details": "Renovaciones, seguros, mobiliario, administración, licencias AL y mantenimiento"
     },
     "step8": {
