@@ -27,9 +27,9 @@ const TestimonialsSection = () => {
     },
     {
       name: "Hideo Yokoi",
-      location: "Lisboa, Portugal",
+      location: "Tokyo, Japan",
       investment: "€1,160,000",
-      property: "Apartamento en Belém, Portugal",
+      property: "Apartamento en Belém",
       image: "/Hideo.png",
       quote: t('testimonials.anaQuote'),
       rating: 5
