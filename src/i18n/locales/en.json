@@ -116,6 +116,8 @@
     "phoneTitle": "Phone",
     "phoneNumber": "+351 937 958 969",
     "callNow": "Call Now",
+    "linkedinText": "Connect with me",
+    "linkedinButton": "View Profile",
     "validationError": "Validation Error",
     "messageSent": "Message Sent!",
     "messageSuccess": "Thank you for your interest. We'll respond within 24 hours.",

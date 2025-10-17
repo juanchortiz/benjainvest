@@ -276,11 +276,11 @@ const ContactSection = () => {
                   </div>
                   <h4 className="font-semibold text-foreground mb-2">LinkedIn</h4>
                   <p className="text-sm text-muted-foreground mb-4">
-                    Conecta conmigo profesionalmente
+                    {t('contact.linkedinText')}
                   </p>
                   <Button variant="ghost" size="sm" className="w-full" asChild>
                     <a href="https://www.linkedin.com/in/benjamin-valdivia-barros-02b38b139/?originalSubdomain=pt" target="_blank" rel="noopener noreferrer">
-                      Ver Perfil
+                      {t('contact.linkedinButton')}
                     </a>
                   </Button>
                 </CardContent>
