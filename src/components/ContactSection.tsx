@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Calendar, Mail, Phone, MessageSquare, ArrowRight, Loader2 } from "lucide-react";
+import { Calendar, Mail, Phone, MessageSquare, ArrowRight, Loader2, Linkedin } from "lucide-react";
 import apartmentInterior from "@/assets/lisbon-apartment-interior.jpg";
 import { openGoogleCalendarBooking } from "@/utils/googleCalendar";
 import { toast } from "@/hooks/use-toast";
@@ -238,7 +238,7 @@ const ContactSection = () => {
               </CardContent>
             </Card>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
               <Card className="shadow-soft border-border hover:shadow-elegant transition-all duration-300">
                 <CardContent className="p-3 md:p-6 text-center">
                   <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -265,6 +265,23 @@ const ContactSection = () => {
                   </p>
                   <Button variant="ghost" size="sm" className="w-full" asChild>
                     <a href="tel:+351937958969">{t('contact.callNow')}</a>
+                  </Button>
+                </CardContent>
+              </Card>
+
+              <Card className="shadow-soft border-border hover:shadow-elegant transition-all duration-300">
+                <CardContent className="p-3 md:p-6 text-center">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <Linkedin className="h-6 w-6 text-primary" />
+                  </div>
+                  <h4 className="font-semibold text-foreground mb-2">LinkedIn</h4>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Conecta conmigo profesionalmente
+                  </p>
+                  <Button variant="ghost" size="sm" className="w-full" asChild>
+                    <a href="https://www.linkedin.com/in/benjamin-valdivia-barros-02b38b139/?originalSubdomain=pt" target="_blank" rel="noopener noreferrer">
+                      Ver Perfil
+                    </a>
                   </Button>
                 </CardContent>
               </Card>
