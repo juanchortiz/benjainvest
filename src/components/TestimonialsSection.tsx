@@ -18,7 +18,7 @@ const TestimonialsSection = () => {
     },
     {
       name: "Carlos Rodríguez",
-      location: "Santiago de Chile, Chile", 
+      location: "Santiago de Chile", 
       investment: "€680,000",
       property: "Apartamento en Cascais",
       image: "/carlos.jpeg",
