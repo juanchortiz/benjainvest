@@ -297,52 +297,6 @@
       "description": "Profitability evaluation, tenant management and appreciation strategies.",
       "details": "Profitability evaluation, platform promotion, tenant management and renovations"
     }
-  },
-  "goldenVisa": {
-    "title": "Golden Visa Portugal",
-    "subtitle": "Strategic investment to obtain residency in Portugal and access to Europe",
-    "latestNews": "Latest News",
-    "news1": {
-      "date": "2025",
-      "title": "New Golden Visa Regulations",
-      "description": "Portugal has updated the requirements for the Golden Visa, eliminating direct real estate investment and focusing on more sustainable options such as eligible investment funds."
-    },
-    "news2": {
-      "date": "2024",
-      "title": "Increase in Fund Applications",
-      "description": "Investments through eligible funds have experienced significant growth, becoming the preferred option for international investors."
-    },
-    "news3": {
-      "date": "2024",
-      "title": "Accelerated Process",
-      "description": "Processing times for Golden Visa through investment funds have been optimized, offering faster response times for investors."
-    },
-    "investmentOptions": "Eligible Investment Options",
-    "option1": {
-      "title": "Investment Funds",
-      "description": "Investment in venture capital funds or eligible investment funds regulated by CMVM (Portuguese Securities Market Commission).",
-      "amount": "Minimum €500,000"
-    },
-    "option2": {
-      "title": "Innovation and Science",
-      "description": "Investment in scientific research projects, technological development or business innovation.",
-      "amount": "Minimum €500,000"
-    },
-    "option3": {
-      "title": "Culture and Heritage",
-      "description": "Investment in projects for the preservation of Portuguese cultural, artistic or historical heritage.",
-      "amount": "Minimum €250,000"
-    },
-    "assistance": {
-      "title": "Benjamin Helps You Through the Entire Process",
-      "description": "As your strategic advisor, I guide you through every stage of the Golden Visa investment process, including the evaluation and selection of eligible investment fund alternatives.",
-      "point1": "Analysis of your investor profile and Golden Visa objectives",
-      "point2": "Evaluation and recommendation of eligible investment funds that fit your needs",
-      "point3": "Advice on selecting the best investment option according to your risk profile",
-      "point4": "Complete coordination of the process from initial investment to obtaining residency",
-      "highlight": "We help you find the best investment alternative for your Golden Visa, including access to eligible investment funds with detailed analysis of each option.",
-      "cta": "Free Consultation"
-    }
   }
 }
 

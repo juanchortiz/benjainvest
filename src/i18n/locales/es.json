@@ -297,52 +297,6 @@
       "description": "Evaluación de rentabilidad, gestión de inquilinos y estrategias de valorización.",
       "details": "Evaluación de rentabilidad, promoción en plataformas, gestión de inquilinos y reformas"
     }
-  },
-  "goldenVisa": {
-    "title": "Golden Visa Portugal",
-    "subtitle": "Inversión estratégica para obtener residencia en Portugal y acceso a Europa",
-    "latestNews": "Últimas Noticias",
-    "news1": {
-      "date": "2025",
-      "title": "Nuevas Regulaciones Golden Visa",
-      "description": "Portugal ha actualizado los requisitos para la Golden Visa, eliminando la inversión inmobiliaria directa y enfocándose en opciones más sostenibles como fondos de inversión elegibles."
-    },
-    "news2": {
-      "date": "2024",
-      "title": "Aumento en Solicitudes de Fondos",
-      "description": "Las inversiones a través de fondos elegibles han experimentado un crecimiento significativo, convirtiéndose en la opción preferida para inversores internacionales."
-    },
-    "news3": {
-      "date": "2024",
-      "title": "Proceso Acelerado",
-      "description": "Los tiempos de procesamiento para Golden Visa a través de fondos de inversión se han optimizado, ofreciendo tiempos de respuesta más rápidos para los inversores."
-    },
-    "investmentOptions": "Opciones de Inversión Elegibles",
-    "option1": {
-      "title": "Fondos de Inversión",
-      "description": "Inversión en fondos de capital riesgo o fondos de inversión elegibles regulados por la CMVM (Comisión del Mercado de Valores Mobiliarios).",
-      "amount": "Mínimo €500,000"
-    },
-    "option2": {
-      "title": "Innovación y Ciencia",
-      "description": "Inversión en proyectos de investigación científica, desarrollo tecnológico o innovación empresarial.",
-      "amount": "Mínimo €500,000"
-    },
-    "option3": {
-      "title": "Cultura y Patrimonio",
-      "description": "Inversión en proyectos de preservación del patrimonio cultural, artístico o histórico portugués.",
-      "amount": "Mínimo €250,000"
-    },
-    "assistance": {
-      "title": "Benjamin te Ayuda en Todo el Proceso",
-      "description": "Como tu asesor estratégico, te guío en cada etapa del proceso de inversión para la Golden Visa, incluyendo la evaluación y selección de alternativas de fondos de inversión elegibles.",
-      "point1": "Análisis de tu perfil de inversor y objetivos para la Golden Visa",
-      "point2": "Evaluación y recomendación de fondos de inversión elegibles que se ajusten a tus necesidades",
-      "point3": "Asesoramiento en la selección de la mejor opción de inversión según tu perfil de riesgo",
-      "point4": "Coordinación completa del proceso desde la inversión inicial hasta la obtención de la residencia",
-      "highlight": "Te ayudamos a encontrar la mejor alternativa de inversión para tu Golden Visa, incluyendo acceso a fondos de inversión elegibles con análisis detallado de cada opción.",
-      "cta": "Consulta Gratuita"
-    }
   }
 }
 

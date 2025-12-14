@@ -3,7 +3,6 @@ import HeroSection from "@/components/HeroSection";
 import WhyPortugalSection from "@/components/WhyPortugalSection";
 import ExpertiseSection from "@/components/ExpertiseSection";
 import ServicesRoadmap from "@/components/ServicesRoadmap";
-import GoldenVisaSection from "@/components/GoldenVisaSection";
 import SeedRealEstateSection from "@/components/SeedRealEstateSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import IMTSimulator from "@/components/IMTSimulator";
@@ -27,9 +26,6 @@ const Index = () => {
         </section>
         <section id="roadmap">
           <ServicesRoadmap />
-        </section>
-        <section id="golden-visa">
-          <GoldenVisaSection />
         </section>
         <section id="seed">
           <SeedRealEstateSection />
